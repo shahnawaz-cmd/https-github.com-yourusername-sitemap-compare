@@ -1,0 +1,2238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sitemap Comparison Report - 2026-04-09 23:10</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            background: #f5f7fa;
+            color: #2c3e50;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 12px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        
+        .header-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        .info-item {
+            background: rgba(255,255,255,0.1);
+            padding: 15px;
+            border-radius: 8px;
+        }
+        
+        .info-label {
+            font-size: 0.9rem;
+            opacity: 0.9;
+            margin-bottom: 5px;
+        }
+        
+        .info-value {
+            font-size: 1.1rem;
+            font-weight: 600;
+            word-break: break-all;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .stat-card {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: transform 0.3s;
+        }
+        
+        .stat-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+        }
+        
+        .stat-value {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+        
+        .stat-label {
+            color: #7f8c8d;
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .stat-card.passed .stat-value { color: #27ae60; }
+        .stat-card.failed .stat-value { color: #e74c3c; }
+        .stat-card.errors .stat-value { color: #f39c12; }
+        .stat-card.total .stat-value { color: #3498db; }
+        
+        .progress-bar {
+            width: 100%;
+            height: 30px;
+            background: #ecf0f1;
+            border-radius: 15px;
+            overflow: hidden;
+            margin-bottom: 30px;
+            display: flex;
+        }
+        
+        .progress-passed {
+            background: #27ae60;
+            height: 100%;
+            transition: width 0.5s;
+        }
+        
+        .progress-failed {
+            background: #e74c3c;
+            height: 100%;
+            transition: width 0.5s;
+        }
+        
+        .progress-errors {
+            background: #f39c12;
+            height: 100%;
+            transition: width 0.5s;
+        }
+        
+        .controls {
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+        
+        .filter-group {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        
+        .filter-btn {
+            padding: 10px 20px;
+            border: 2px solid #ddd;
+            background: white;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: all 0.3s;
+        }
+        
+        .filter-btn:hover {
+            border-color: #3498db;
+            background: #ebf5fb;
+        }
+        
+        .filter-btn.active {
+            background: #3498db;
+            color: white;
+            border-color: #3498db;
+        }
+        
+        .search-box {
+            flex: 1;
+            min-width: 250px;
+        }
+        
+        .search-box input {
+            width: 100%;
+            padding: 10px 15px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            font-size: 14px;
+        }
+        
+        .export-btn {
+            padding: 10px 20px;
+            background: #27ae60;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background 0.3s;
+        }
+        
+        .export-btn:hover {
+            background: #229954;
+        }
+        
+        .table-container {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        thead {
+            background: #34495e;
+            color: white;
+        }
+        
+        th {
+            padding: 15px;
+            text-align: left;
+            font-weight: 600;
+            cursor: pointer;
+            user-select: none;
+        }
+        
+        th:hover {
+            background: #2c3e50;
+        }
+        
+        td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #ecf0f1;
+        }
+        
+        tr:hover {
+            background: #f8f9fa;
+        }
+        
+        tr.failed {
+            background: #fee;
+        }
+        
+        tr.failed:hover {
+            background: #fdd;
+        }
+        
+        tr.error {
+            background: #fff3cd;
+        }
+        
+        tr.error:hover {
+            background: #ffeaa7;
+        }
+        
+        .badge {
+            display: inline-block;
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+        
+        .badge-200 {
+            background: #d4edda;
+            color: #155724;
+        }
+        
+        .badge-404 {
+            background: #f8d7da;
+            color: #721c24;
+        }
+        
+        .badge-redirect {
+            background: #fff3cd;
+            color: #856404;
+        }
+        
+        .badge-500 {
+            background: #f8d7da;
+            color: #721c24;
+        }
+        
+        .badge-other {
+            background: #e2e3e5;
+            color: #383d41;
+        }
+        
+        .path-cell {
+            max-width: 400px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+        
+        .error-cell {
+            max-width: 300px;
+            color: #e74c3c;
+            font-size: 0.9rem;
+        }
+        
+        .btn-link {
+            display: inline-block;
+            padding: 4px 8px;
+            margin: 0 2px;
+            background: #3498db;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            transition: background 0.3s;
+        }
+        
+        .btn-link:hover {
+            background: #2980b9;
+        }
+        
+        .footer {
+            margin-top: 30px;
+            text-align: center;
+            color: #7f8c8d;
+            padding: 20px;
+        }
+        
+        .select-all {
+            margin-right: 10px;
+        }
+        
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 1.8rem;
+            }
+            
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .table-container {
+                overflow-x: auto;
+            }
+            
+            table {
+                font-size: 0.9rem;
+            }
+            
+            th, td {
+                padding: 8px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🔍 Sitemap Comparison Report</h1>
+            <p>Generated: 2026-04-09 23:10:57</p>
+            
+            <div class="header-info">
+                <div class="info-item">
+                    <div class="info-label">Baseline Sitemap</div>
+                    <div class="info-value">https://vehiclehistory.eu/sitemap_index.xml</div>
+                </div>
+                <div class="info-item">
+                    <div class="info-label">DEV Base URL</div>
+                    <div class="info-value">https://vhreu.accessautohistory.com/</div>
+                </div>
+                <div class="info-item">
+                    <div class="info-label">Total URLs Processed</div>
+                    <div class="info-value">126</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="stats-grid">
+            <div class="stat-card total">
+                <div class="stat-value">126</div>
+                <div class="stat-label">Total URLs</div>
+            </div>
+            <div class="stat-card passed">
+                <div class="stat-value">126</div>
+                <div class="stat-label">Passed (100.0%)</div>
+            </div>
+            <div class="stat-card failed">
+                <div class="stat-value">0</div>
+                <div class="stat-label">Failed (0.0%)</div>
+            </div>
+            <div class="stat-card errors">
+                <div class="stat-value">0</div>
+                <div class="stat-label">Errors (0.0%)</div>
+            </div>
+        </div>
+        
+        <div class="progress-bar">
+            <div class="progress-passed" style="width: 100.0%;" title="Passed: 126"></div>
+            <div class="progress-failed" style="width: 0.0%;" title="Failed: 0"></div>
+            <div class="progress-errors" style="width: 0.0%;" title="Errors: 0"></div>
+        </div>
+        
+        <div class="stats-grid" style="grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));">
+            <div class="stat-card">
+                <div class="stat-value" style="color: #27ae60; font-size: 2rem;">126</div>
+                <div class="stat-label">200 OK</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value" style="color: #f39c12; font-size: 2rem;">0</div>
+                <div class="stat-label">Redirects</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value" style="color: #e74c3c; font-size: 2rem;">0</div>
+                <div class="stat-label">404 Errors</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value" style="color: #e74c3c; font-size: 2rem;">0</div>
+                <div class="stat-label">500 Errors</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value" style="color: #3498db; font-size: 2rem;">0.58s</div>
+                <div class="stat-label">Avg Response</div>
+            </div>
+        </div>
+        
+        <div class="controls">
+            <div class="filter-group">
+                <button class="filter-btn active" data-filter="all">All (126)</button>
+                <button class="filter-btn" data-filter="passed">✅ Passed (126)</button>
+                <button class="filter-btn" data-filter="failed">❌ Failed (0)</button>
+                <button class="filter-btn" data-filter="error">⚠️ Errors (0)</button>
+            </div>
+            
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="🔍 Search URLs...">
+            </div>
+            
+            <div>
+                <label class="select-all">
+                    <input type="checkbox" id="selectAll"> Select All
+                </label>
+            </div>
+            
+            <button class="export-btn" onclick="exportToCSV()">📊 Export to CSV</button>
+        </div>
+        
+        <div class="table-container">
+            <table id="resultsTable">
+                <thead>
+                    <tr>
+                        <th width="30"><input type="checkbox" id="headerCheckbox"></th>
+                        <th width="40"></th>
+                        <th onclick="sortTable(2)">Path ⬍</th>
+                        <th onclick="sortTable(3)" width="120">Status ⬍</th>
+                        <th onclick="sortTable(4)" width="100">Response Time ⬍</th>
+                        <th>Error/Redirect</th>
+                        <th width="150">Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+            <tr class="passed">
+                <td><input type="checkbox" class="row-checkbox"></td>
+                <td>✅</td>
+                <td class="path-cell" title="/blog/best-peugeot-car">/blog/best-peugeot-car</td>
+                <td><span class="badge badge-200">200 OK</span></td>
+                <td>1.75s</td>
+                <td class="error-cell">-</td>
+                <td>
+                    <a href="https://vehiclehistory.eu/blog/best-peugeot-car" target="_blank" class="btn-link">Baseline</a>
+                    <a href="https://vhreu.accessautohistory.com/blog/best-peugeot-car" target="_blank" class="btn-link">DEV</a>
+                </td>
+            </tr>
+            
+            <tr class="passed">
+                <td><input type="checkbox" class="row-checkbox"></td>
+                <td>✅</td>
+                <td class="path-cell" title="/blog/how-to-check-bmw-chassis-number-explained-for-beginners">/blog/how-to-check-bmw-chassis-number-explained-for-beginners</td>
+                <td><span class="badge badge-200">200 OK</span></td>
+                <td>1.99s</td>
+                <td class="error-cell">-</td>
+                <td>
+                    <a href="https://vehiclehistory.eu/blog/how-to-check-bmw-chassis-number-explained-for-beginners" target="_blank" class="btn-link">Baseline</a>
+                    <a href="https://vhreu.accessautohistory.com/blog/how-to-check-bmw-chassis-number-explained-for-beginners" target="_blank" class="btn-link">DEV</a>
+                </td>
+            </tr>
+            
+            <tr class="passed">
+                <td><input type="checkbox" class="row-checkbox"></td>
+                <td>✅</td>
+                <td class="path-cell" title="/blog/how-to-find-service-history-of-a-car">/blog/how-to-find-service-history-of-a-car</td>
+                <td><span class="badge badge-200">200 OK</span></td>
+                <td>1.77s</td>
+                <td class="error-cell">-</td>
+                <td>
+                    <a href="https://vehiclehistory.eu/blog/how-to-find-service-history-of-a-car" target="_blank" class="btn-link">Baseline</a>
+                    <a href="https://vhreu.accessautohistory.com/blog/how-to-find-service-history-of-a-car" target="_blank" class="btn-link">DEV</a>
+                </td>
+            </tr>
+            
+            <tr class="passed">
+                <td><input type="checkbox" class="row-checkbox"></td>
+                <td>✅</td>
+                <td class="path-cell" title="/blog">/blog</td>
+                <td><span class="badge badge-200">200 OK</span></td>
+                <td>1.84s</td>
+                <td class="error-cell">-</td>
+                <td>
+                    <a href="https://vehiclehistory.eu/blog" target="_blank" class="btn-link">Baseline</a>
+                    <a href="https://vhreu.accessautohistory.com/blog" target="_blank" class="btn-link">DEV</a>
+                </td>
+            </tr>
+            
+            <tr class="passed">
+                <td><input type="checkbox" class="row-checkbox"></td>
+                <td>✅</td>
+                <td class="path-cell" title="/blog/the-truth-about-volvo-performance">/blog/the-truth-about-volvo-performance</td>
+                <td><span class="badge badge-200">200 OK</span></td>
+                <td>1.61s</td>
+                <td class="error-cell">-</td>
+                <td>
+                    <a href="https://vehiclehistory.eu/blog/the-truth-about-volvo-performance" target="_blank" class="btn-link">Baseline</a>
+                    <a href="https://vhreu.accessautohistory.com/blog/the-truth-about-volvo-performance" target="_blank" class="btn-link">DEV</a>
+                </td>
+            </tr>
+            
+            <tr class="passed">
+                <td><input type="checkbox" class="row-checkbox"></td>
+                <td>✅</td>
+                <td class="path-cell" title="/blog/best-hybrid-cars-in-ireland">/blog/best-hybrid-cars-in-ireland</td>
+                <td><span class="badge badge-200">200 OK</span></td>
+                <td>1.74s</td>
+                <td class="error-cell">-</td>
+                <td>
+                    <a href="https://vehiclehistory.eu/blog/best-hybrid-cars-in-ireland" target="_blank" class="btn-link">Baseline</a>
+                    <a href="https://vhreu.accessautohistory.com/blog/best-hybrid-cars-in-ireland" target="_blank" class="btn-link">DEV</a>
+                </td>
+            </tr>
+            
+            <tr class="passed">
+                <td><input type="checkbox" class="row-checkbox"></td>
+                <td>✅</td>
+                <td class="path-cell" title="/blog/cheapest-electric-car-ireland">/blog/cheapest-electric-car-ireland</td>
+                <td><span class="badge badge-200">200 OK</span></td>
+                <td>1.64s</td>
+                <td class="error-cell">-</td>
+                <td>
+                    <a href="https://vehiclehistory.eu/blog/cheapest-electric-car-ireland" target="_blank" class="btn-link">Baseline</a>
+                    <a href="https://vhreu.accessautohistory.com/blog/cheapest-electric-car-ireland" target="_blank" class="btn-link">DEV</a>
+                </td>
+            </tr>
+            
+            <tr class="passed">
+                <td><input type="checkbox" class="row-checkbox"></td>
+                <td>✅</td>
+                <td class="path-cell" title="/blog/citroen-vin-check-free-why-its-important-and-where-to-do-it">/blog/citroen-vin-check-free-why-its-important-and-where-to-do-it</td>
+                <td><span class="badge badge-200">200 OK</span></td>
+                <td>1.89s</td>
+                <td class="error-cell">-</td>
+                <td>
+                    <a href="https://vehiclehistory.eu/blog/citroen-vin-check-free-why-its-important-and-where-to-do-it" target="_blank" class="btn-link">Baseline</a>
+                    <a href="https://vhreu.accessautohistory.com/blog/citroen-vin-check-free-why-its-important-and-where-to-do-it" target="_blank" class="btn-link">DEV</a>
+                </td>
+            </tr>
+            
+            <tr class="passed">
+                <td><input type="checkbox" class="row-checkbox"></td>
+                <td>✅</td>
+                <td class="path-cell" title="/blog/best-citroen-car">/blog/best-citroen-car</td>
+                <td><span class="badge badge-200">200 OK</span></td>
+                <td>1.82s</td>
+                <td class="error-cell">-</td>
+                <td>
+                    <a href="https://vehiclehistory.eu/blog/best-citroen-car" target="_blank" class="btn-link">Baseline</a>
+                    <a href="https://vhreu.accessautohistory.com/blog/best-citroen-car" target="_blank" class="btn-link">DEV</a>
+                </td>
+            </tr>
+            
+            <tr class="passed">
+                <td><input type="checkbox" class="row-checkbox"></td>
+                <td>✅</td>
+                <td class="path-cell" title="/blog/most-popular-car-in-poland">/blog/most-popular-car-in-poland</td>
+                <td><span class="badge badge-200">200 OK</span></td>
+                <td>1.70s</td>
+                <td class="error-cell">-</td>
+                <td>
+                    <a href="https://vehiclehistory.eu/blog/most-popular-car-in-poland" target="_blank" class="btn-link">Baseline</a>
+                    <a href="https://vhreu.accessautohistory.com/blog/most-popular-car-in-poland" target="_blank" class="btn-link">DEV</a>
+                </td>
+            </tr>
+            
+            <tr class="passed">
+                <td><input type="checkbox" class="row-checkbox"></td>
+                <td>✅</td>
+                <td class="path-cell" title="/blog/top-european-car-brands">/blog/top-european-car-brands</td>
+                <td><span class="badge badge-200">200 OK</span></td>
+                <td>0.23s</td>
+                <td class="error-cell">-</td>
+                <td>
+                    <a href="https://vehiclehistory.eu/blog/top-european-car-brands" target="_blank" class="btn-link">Baseline</a>
+                    <a href="https://vhreu.accessautohistory.com/blog/top-european-car-brands" target="_blank" class="btn-link">DEV</a>
+                </td>
+            </tr>
+            
+            <tr class="passed">
+                <td><input type="checkbox" class="row-checkbox"></td>
+                <td>✅</td>
+                <td class="path-cell" title="/blog/how-many-cars-in-europe">/blog/how-many-cars-in-europe</td>
+                <td><span class="badge badge-200">200 OK</span></td>
+                <td>0.32s</td>
+                <td class="error-cell">-</td>
+                <td>
+                    <a href="https://vehiclehistory.eu/blog/how-many-cars-in-europe" target="_blank" class="btn-link">Baseline</a>
+                    <a href="https://vhreu.accessautohistory.com/blog/how-many-cars-in-europe" target="_blank" class="btn-link">DEV</a>
+                </td>
+            </tr>
+            
+            <tr class="passed">
+                <td><input type="checkbox" class="row-checkbox"></td>
+                <td>✅</td>
+                <td class="path-cell" title="/blog/what-is-a-gt-car">/blog/what-is-a-gt-car</td>
+                <td><span class="badge badge-200">200 OK</span></td>
+                <td>0.30s</td>
+                <td class="error-cell">-</td>
+                <td>
+                    <a href="https://vehiclehistory.eu/blog/what-is-a-gt-car" target="_blank" class="btn-link">Baseline</a>
+                    <a href="https://vhreu.accessautohistory.com/blog/what-is-a-gt-car" target="_blank" class="btn-link">DEV</a>
+                </td>
+            </tr>
+            
+            <tr class="passed">
+                <td><input type="checkbox" class="row-checkbox"></td>
+                <td>✅</td>
+                <td class="path-cell" title="/blog/what-is-good-fuel-economy-for-a-car">/blog/what-is-good-fuel-economy-for-a-car</td>
+                <td><span class="badge badge-200">200 OK</span></td>
+                <td>0.35s</td>
+                <td class="error-cell">-</td>
+                <td>
+                    <a href="https://vehiclehistory.eu/blog/what-is-good-fuel-economy-for-a-car" target="_blank" class="btn-link">Baseline</a>
+                    <a href="https://vhreu.accessautohistory.com/blog/what-is-good-fuel-economy-for-a-car" target="_blank" class="btn-link">DEV</a>
+                </td>
+            </tr>
+            
+            <tr class="passed">
+                <td><input type="checkbox" class="row-checkbox"></td>
+                <td>✅</td>
+                <td class="path-cell" title="/blog/vin-cloning">/blog/vin-cloning</td>
+                <td><span class="badge badge-200">200 OK</span></td>
+                <td>0.36s</td>
+                <td class="error-cell">-</td>
+                <td>
+                    <a href="https://vehiclehistory.eu/blog/vin-cloning" target="_blank" class="btn-link">Baseline</a>
+                    <a href="https://vhreu.accessautohistory.com/blog/vin-cloning" target="_blank" class="btn-link">DEV</a>
+                </td>
+            </tr>
+            
+            <tr class="passed">
+                <td><input type="checkbox" class="row-checkbox"></td>
+                <td>✅</td>
+                <td class="path-cell" title="/blog/buying-a-car-that-was-in-an-accident">/blog/buying-a-car-that-was-in-an-accident</td>
+                <td><span class="badge badge-200">200 OK</span></td>
+                <td>0.32s</td>
+                <td class="error-cell">-</td>
+                <td>
+                    <a href="https://vehiclehistory.eu/blog/buying-a-car-that-was-in-an-accident" target="_blank" class="btn-link">Baseline</a>
+                    <a href="https://vhreu.accessautohistory.com/blog/buying-a-car-that-was-in-an-accident" target="_blank" class="btn-link">DEV</a>
+                </td>
+            </tr>
+            
+            <tr class="passed">
+                <td><input type="checkbox" class="row-checkbox"></td>
+                <td>✅</td>
+                <td class="path-cell" title="/blog/car-dashboard-symbols-and-meanings">/blog/car-dashboard-symbols-and-meanings</td>
+                <td><span class="badge badge-200">200 OK</span></td>
+                <td>0.38s</td>
+                <td class="error-cell">-</td>
+                <td>
+                    <a href="https://vehiclehistory.eu/blog/car-dashboard-symbols-and-meanings" target="_blank" class="btn-link">Baseline</a>
+                    <a href="https://vhreu.accessautohistory.com/blog/car-dashboard-symbols-and-meanings" target="_blank" class="btn-link">DEV</a>
+                </td>
+            </tr>
+            
+            <tr class="passed">
+                <td><input type="checkbox" class="row-checkbox"></td>
+                <td>✅</td>
+                <td class="path-cell" title="/blog/how-much-over-the-speed-limit-are-you-allowed-in-ireland">/blog/how-much-over-the-speed-limit-are-you-allowed-in-ireland</td>
+                <td><span class="badge badge-200">200 OK</span></td>
+                <td>0.41s</td>
+                <td class="error-cell">-</td>
+                <td>
+                    <a href="https://vehiclehistory.eu/blog/how-much-over-the-speed-limit-are-you-allowed-in-ireland" target="_blank" class="btn-link">Baseline</a>
+                    <a href="https://vhreu.accessautohistory.com/blog/how-much-over-the-speed-limit-are-you-allowed-in-ireland" target="_blank" class="btn-link">DEV</a>
+                </td>
+            </tr>
+            
+            <tr class="passed">
+                <td><input type="checkbox" class="row-checkbox"></td>
+                <td>✅</td>
+                <td class="path-cell" title="/blog/what-is-vin-etching">/blog/what-is-vin-etching</td>
+                <td><span class="badge badge-200">200 OK</span></td>
+                <td>0.32s</td>
+                <td class="error-cell">-</td>
+                <td>
+                    <a href="https://vehiclehistory.eu/blog/what-is-vin-etching" target="_blank" class="btn-link">Baseline</a>
+                    <a href="https://vhreu.accessautohistory.com/blog/what-is-vin-etching" target="_blank" class="btn-link">DEV</a>
+                </td>
+            </tr>
+            
+            <tr class="passed">
+                <td><input type="checkbox" class="row-checkbox"></td>
+                <td>✅</td>
+                <td class="path-cell" title="/blog/body-control-module">/blog/body-control-module</td>
+                <td><span class="badge badge-200">200 OK</span></td>
+                <td>0.42s</td>
+                <td class="error-cell">-</td>
+                <td>
+                    <a href="https://vehiclehistory.eu/blog/body-control-module" target="_blank" class="btn-link">Baseline</a>
+                    <a href="https://vhreu.accessautohistory.com/blog/body-control-module" target="_blank" class="btn-link">DEV</a>
+                </td>
+            </tr>
+            
+            <tr class="passed">
+                <td><input type="checkbox" class="row-checkbox"></td>
+                <td>✅</td>
+                <td class="path-cell" title="/blog/signs-of-flood-damage-car">/blog/signs-of-flood-damage-car</td>
+                <td><span class="badge badge-200">200 OK</span></td>
+                <td>0.33s</td>
+                <td class="error-cell">-</td>
+                <td>
+                    <a href="https://vehiclehistory.eu/blog/signs-of-flood-damage-car" target="_blank" class="btn-link">Baseline</a>
+                    <a href="https://vhreu.accessautohistory.com/blog/signs-of-flood-damage-car" target="_blank" class="btn-link">DEV</a>
+                </td>
+            </tr>
+            
+            <tr class="passed">
+                <td><input type="checkbox" class="row-checkbox"></td>
+                <td>✅</td>
+                <td class="path-cell" title="/blog/best-vauxhall-car">/blog/best-vauxhall-car</td>
+                <td><span class="badge badge-200">200 OK</span></td>
+                <td>0.24s</td>
+                <td class="error-cell">-</td>
+                <td>
+                    <a href="https://vehiclehistory.eu/blog/best-vauxhall-car" target="_blank" class="btn-link">Baseline</a>
+                    <a href="https://vhreu.accessautohistory.com/blog/best-vauxhall-car" target="_blank" class="btn-link">DEV</a>
+                </td>
+            </tr>
+            
+            <tr class="passed">
+                <td><input type="checkbox" class="row-checkbox"></td>
+                <td>✅</td>
+                <td class="path-cell" title="/blog/where-to-find-vin-number-on-car">/blog/where-to-find-vin-number-on-car</td>
+                <td><span class="badge badge-200">200 OK</span></td>
+                <td>0.31s</td>
+                <td class="error-cell">-</td>
+                <td>
+                    <a href="https://vehiclehistory.eu/blog/where-to-find-vin-number-on-car" target="_blank" class="btn-link">Baseline</a>
+                    <a href="https://vhreu.accessautohistory.com/blog/where-to-find-vin-number-on-car" target="_blank" class="btn-link">DEV</a>
+                </td>
+            </tr>
+            
+            <tr class="passed">
+                <td><input type="checkbox" class="row-checkbox"></td>
+                <td>✅</td>
+                <td class="path-cell" title="/blog/what-is-the-best-used-suv-to-buy-in">/blog/what-is-the-best-used-suv-to-buy-in</td>
+                <td><span class="badge badge-200">200 OK</span></td>
+                <td>0.27s</td>
+                <td class="error-cell">-</td>
+                <td>
+                    <a href="https://vehiclehistory.eu/blog/what-is-the-best-used-suv-to-buy-in" target="_blank" class="btn-link">Baseline</a>
+                    <a href="https://vhreu.accessautohistory.com/blog/what-is-the-best-used-suv-to-buy-in" target="_blank" class="btn-link">DEV</a>
+                </td>
+            </tr>
+            
+            <tr class="passed">
+                <td><input type="checkbox" class="row-checkbox"></td>
+                <td>✅</td>
+                <td class="path-cell" title="/blog/best-family-suv-2024">/blog/best-family-suv-2024</td>
+                <td><span class="badge badge-200">200 OK</span></td>
+                <td>0.27s</td>
+                <td class="error-cell">-</td>
+                <td>
+                    <a href="https://vehiclehistory.eu/blog/best-family-suv-2024" target="_blank" class="btn-link">Baseline</a>
+                    <a href="https://vhreu.accessautohistory.com/blog/best-family-suv-2024" target="_blank" class="btn-link">DEV</a>
+                </td>
+            </tr>
+            
+            <tr class="passed">
+                <td><input type="checkbox" class="row-checkbox"></td>
+                <td>✅</td>
+                <td class="path-cell" title="/blog/how-to-check-equipment-by-vin-number">/blog/how-to-check-equipment-by-vin-number</td>
+                <td><span class="badge badge-200">200 OK</span></td>
+                <td>0.27s</td>
+                <td class="error-cell">-</td>
+                <td>
+                    <a href="https://vehiclehistory.eu/blog/how-to-check-equipment-by-vin-number" target="_blank" class="btn-link">Baseline</a>
+                    <a href="https://vhreu.accessautohistory.com/blog/how-to-check-equipment-by-vin-number" target="_blank" class="btn-link">DEV</a>
+                </td>
+            </tr>
+            
+            <tr class="passed">
+                <td><input type="checkbox" class="row-checkbox"></td>
+                <td>✅</td>
+                <td class="path-cell" title="/blog/how-to-check-how-many-owners-a-car-has-had">/blog/how-to-check-how-many-owners-a-car-has-had</td>
+                <td><span class="badge badge-200">200 OK</span></td>
+                <td>0.34s</td>
+                <td class="error-cell">-</td>
+                <td>
+                    <a href="https://vehiclehistory.eu/blog/how-to-check-how-many-owners-a-car-has-had" target="_blank" class="btn-link">Baseline</a>
+                    <a href="https://vhreu.accessautohistory.com/blog/how-to-check-how-many-owners-a-car-has-had" target="_blank" class="btn-link">DEV</a>
+                </td>
+            </tr>
+            
+            <tr class="passed">
+                <td><input type="checkbox" class="row-checkbox"></td>
+                <td>✅</td>
+                <td class="path-cell" title="/blog/what-is-considered-bad-gas-mileage">/blog/what-is-considered-bad-gas-mileage</td>
+                <td><span class="badge badge-200">200 OK</span></td>
+                <td>0.31s</td>
+                <td class="error-cell">-</td>
+                <td>
+                    <a href="https://vehiclehistory.eu/blog/what-is-considered-bad-gas-mileage" target="_blank" class="btn-link">Baseline</a>
+                    <a href="https://vhreu.accessautohistory.com/blog/what-is-considered-bad-gas-mileage" target="_blank" class="btn-link">DEV</a>
+                </td>
+            </tr>
+            
+            <tr class="passed">
+                <td><input type="checkbox" class="row-checkbox"></td>
+                <td>✅</td>
+                <td class="path-cell" title="/blog/why-a-mileage-check-is-crucial-when-buying-a-used-car">/blog/why-a-mileage-check-is-crucial-when-buying-a-used-car</td>
+                <td><span class="badge badge-200">200 OK</span></td>
+                <td>0.33s</td>
+                <td class="error-cell">-</td>
+                <td>
+                    <a href="https://vehiclehistory.eu/blog/why-a-mileage-check-is-crucial-when-buying-a-used-car" target="_blank" class="btn-link">Baseline</a>
+                    <a href="https://vhreu.accessautohistory.com/blog/why-a-mileage-check-is-crucial-when-buying-a-used-car" target="_blank" class="btn-link">DEV</a>
+                </td>
+            </tr>
+            
+            <tr class="passed">
+                <td><input type="checkbox" class="row-checkbox"></td>
+                <td>✅</td>
+                <td class="path-cell" title="/blog/best-used-electric-cars">/blog/best-used-electric-cars</td>
+                <td><span class="badge badge-200">200 OK</span></td>
+                <td>0.35s</td>
+                <td class="error-cell">-</td>
+                <td>
+                    <a href="https://vehiclehistory.eu/blog/best-used-electric-cars" target="_blank" class="btn-link">Baseline</a>
+                    <a href="https://vhreu.accessautohistory.com/blog/best-used-electric-cars" target="_blank" class="btn-link">DEV</a>
+                </td>
+            </tr>
+            
+            <tr class="passed">
+                <td><input type="checkbox" class="row-checkbox"></td>
+                <td>✅</td>
+                <td class="path-cell" title="/blog/why-a-hyundai-vin-check-is-crucial-before-you-buy-a-used-car-in-europe">/blog/why-a-hyundai-vin-check-is-crucial-before-you-buy-a-used-car-in-europe</td>
+                <td><span class="badge badge-200">200 OK</span></td>
+                <td>0.34s</td>
+                <td class="error-cell">-</td>
+                <td>
+                    <a href="https://vehiclehistory.eu/blog/why-a-hyundai-vin-check-is-crucial-before-you-buy-a-used-car-in-europe" target="_blank" class="btn-link">Baseline</a>
+                    <a href="https://vhreu.accessautohistory.com/blog/why-a-hyundai-vin-check-is-crucial-before-you-buy-a-used-car-in-europe" target="_blank" class="btn-link">DEV</a>
+                </td>
+            </tr>
+            
+            <tr class="passed">
+                <td><input type="checkbox" class="row-checkbox"></td>
+                <td>✅</td>
+                <td class="path-cell" title="/blog/what-is-the-best-site-to-check-the-vin-number">/blog/what-is-the-best-site-to-check-the-vin-number</td>
+                <td><span class="badge badge-200">200 OK</span></td>
+                <td>0.29s</td>
+                <td class="error-cell">-</td>
+                <td>
+                    <a href="https://vehiclehistory.eu/blog/what-is-the-best-site-to-check-the-vin-number" target="_blank" class="btn-link">Baseline</a>
+                    <a href="https://vhreu.accessautohistory.com/blog/what-is-the-best-site-to-check-the-vin-number" target="_blank" class="btn-link">DEV</a>
+                </td>
+            </tr>
+            
+            <tr class="passed">
+                <td><input type="checkbox" class="row-checkbox"></td>
+                <td>✅</td>
+                <td class="path-cell" title="/blog/how-to-check-engine-size-by-vin-number">/blog/how-to-check-engine-size-by-vin-number</td>
+                <td><span class="badge badge-200">200 OK</span></td>
+                <td>0.49s</td>
+                <td class="error-cell">-</td>
+                <td>
+                    <a href="https://vehiclehistory.eu/blog/how-to-check-engine-size-by-vin-number" target="_blank" class="btn-link">Baseline</a>
+                    <a href="https://vhreu.accessautohistory.com/blog/how-to-check-engine-size-by-vin-number" target="_blank" class="btn-link">DEV</a>
+                </td>
+            </tr>
+            
+            <tr class="passed">
+                <td><input type="checkbox" class="row-checkbox"></td>
+                <td>✅</td>
+                <td class="path-cell" title="/blog/electrifying-savings-finding-the-cheapest-electric-car-in-ireland">/blog/electrifying-savings-finding-the-cheapest-electric-car-in-ireland</td>
+                <td><span class="badge badge-200">200 OK</span></td>
+                <td>0.35s</td>
+                <td class="error-cell">-</td>
+                <td>
+                    <a href="https://vehiclehistory.eu/blog/electrifying-savings-finding-the-cheapest-electric-car-in-ireland" target="_blank" class="btn-link">Baseline</a>
+                    <a href="https://vhreu.accessautohistory.com/blog/electrifying-savings-finding-the-cheapest-electric-car-in-ireland" target="_blank" class="btn-link">DEV</a>
+                </td>
+            </tr>
+            
+            <tr class="passed">
+                <td><input type="checkbox" class="row-checkbox"></td>
+                <td>✅</td>
+                <td class="path-cell" title="/blog/european-car-check-tools-7-essential-resources-for-every-european-car-owner">/blog/european-car-check-tools-7-essential-resources-for-every-european-car-owne...</td>
+                <td><span class="badge badge-200">200 OK</span></td>
+                <td>0.36s</td>
+                <td class="error-cell">-</td>
+                <td>
+                    <a href="https://vehiclehistory.eu/blog/european-car-check-tools-7-essential-resources-for-every-european-car-owner" target="_blank" class="btn-link">Baseline</a>
+                    <a href="https://vhreu.accessautohistory.com/blog/european-car-check-tools-7-essential-resources-for-every-european-car-owner" target="_blank" class="btn-link">DEV</a>
+                </td>
+            </tr>
+            
+            <tr class="passed">
+                <td><input type="checkbox" class="row-checkbox"></td>
+                <td>✅</td>
+                <td class="path-cell" title="/blog/the-check-engine-light-on-car-what-does-it-mean">/blog/the-check-engine-light-on-car-what-does-it-mean</td>
+                <td><span class="badge badge-200">200 OK</span></td>
+                <td>0.39s</td>
+                <td class="error-cell">-</td>
+                <td>
+                    <a href="https://vehiclehistory.eu/blog/the-check-engine-light-on-car-what-does-it-mean" target="_blank" class="btn-link">Baseline</a>
+                    <a href="https://vhreu.accessautohistory.com/blog/the-check-engine-light-on-car-what-does-it-mean" target="_blank" class="btn-link">DEV</a>
+                </td>
+            </tr>
+            
+            <tr class="passed">
+                <td><input type="checkbox" class="row-checkbox"></td>
+                <td>✅</td>
+                <td class="path-cell" title="/">/</td>
+                <td><span class="badge badge-200">200 OK</span></td>
+                <td>0.42s</td>
+                <td class="error-cell">-</td>
+                <td>
+                    <a href="https://vehiclehistory.eu/" target="_blank" class="btn-link">Baseline</a>
+                    <a href="https://vhreu.accessautohistory.com" target="_blank" class="btn-link">DEV</a>
+                </td>
+            </tr>
+            
+            <tr class="passed">
+                <td><input type="checkbox" class="row-checkbox"></td>
+                <td>✅</td>
+                <td class="path-cell" title="/blog/how-to-jump-start-a-car-a-comprehensive-guide">/blog/how-to-jump-start-a-car-a-comprehensive-guide</td>
+                <td><span class="badge badge-200">200 OK</span></td>
+                <td>0.59s</td>
+                <td class="error-cell">-</td>
+                <td>
+                    <a href="https://vehiclehistory.eu/blog/how-to-jump-start-a-car-a-comprehensive-guide" target="_blank" class="btn-link">Baseline</a>
+                    <a href="https://vhreu.accessautohistory.com/blog/how-to-jump-start-a-car-a-comprehensive-guide" target="_blank" class="btn-link">DEV</a>
+                </td>
+            </tr>
+            
+            <tr class="passed">
+                <td><input type="checkbox" class="row-checkbox"></td>
+                <td>✅</td>
+                <td class="path-cell" title="/blog/how-much-does-it-cost-to-charge-an-electric-car-in-ireland">/blog/how-much-does-it-cost-to-charge-an-electric-car-in-ireland</td>
+                <td><span class="badge badge-200">200 OK</span></td>
+                <td>0.53s</td>
+                <td class="error-cell">-</td>
+                <td>
+                    <a href="https://vehiclehistory.eu/blog/how-much-does-it-cost-to-charge-an-electric-car-in-ireland" target="_blank" class="btn-link">Baseline</a>
+                    <a href="https://vhreu.accessautohistory.com/blog/how-much-does-it-cost-to-charge-an-electric-car-in-ireland" target="_blank" class="btn-link">DEV</a>
+                </td>
+            </tr>
+            
+            <tr class="passed">
+                <td><input type="checkbox" class="row-checkbox"></td>
+                <td>✅</td>
+                <td class="path-cell" title="/blog/tips-for-securing-your-vehicle-at-night">/blog/tips-for-securing-your-vehicle-at-night</td>
+                <td><span class="badge badge-200">200 OK</span></td>
+                <td>0.56s</td>
+                <td class="error-cell">-</td>
+                <td>
+                    <a href="https://vehiclehistory.eu/blog/tips-for-securing-your-vehicle-at-night" target="_blank" class="btn-link">Baseline</a>
+                    <a href="https://vhreu.accessautohistory.com/blog/tips-for-securing-your-vehicle-at-night" target="_blank" class="btn-link">DEV</a>
+                </td>
+            </tr>
+            
+            <tr class="passed">
+                <td><input type="checkbox" class="row-checkbox"></td>
+                <td>✅</td>
+                <td class="path-cell" title="/vin-decoder/audi">/vin-decoder/audi</td>
+                <td><span class="badge badge-200">200 OK</span></td>
+                <td>0.36s</td>
+                <td class="error-cell">-</td>
+                <td>
+                    <a href="https://vehiclehistory.eu/vin-decoder/audi" target="_blank" class="btn-link">Baseline</a>
+                    <a href="https://vhreu.accessautohistory.com/vin-decoder/audi" target="_blank" class="btn-link">DEV</a>
+                </td>
+            </tr>
+            
+            <tr class="passed">
+                <td><input type="checkbox" class="row-checkbox"></td>
+                <td>✅</td>
+                <td class="path-cell" title="/vin-decoder/mini">/vin-decoder/mini</td>
+                <td><span class="badge badge-200">200 OK</span></td>
+                <td>0.62s</td>
+                <td class="error-cell">-</td>
+                <td>
+                    <a href="https://vehiclehistory.eu/vin-decoder/mini" target="_blank" class="btn-link">Baseline</a>
+                    <a href="https://vhreu.accessautohistory.com/vin-decoder/mini" target="_blank" class="btn-link">DEV</a>
+                </td>
+            </tr>
+            
+            <tr class="passed">
+                <td><input type="checkbox" class="row-checkbox"></td>
+                <td>✅</td>
+                <td class="path-cell" title="/vin-decoder/volkswagen">/vin-decoder/volkswagen</td>
+                <td><span class="badge badge-200">200 OK</span></td>
+                <td>0.59s</td>
+                <td class="error-cell">-</td>
+                <td>
+                    <a href="https://vehiclehistory.eu/vin-decoder/volkswagen" target="_blank" class="btn-link">Baseline</a>
+                    <a href="https://vhreu.accessautohistory.com/vin-decoder/volkswagen" target="_blank" class="btn-link">DEV</a>
+                </td>
+            </tr>
+            
+            <tr class="passed">
+                <td><input type="checkbox" class="row-checkbox"></td>
+                <td>✅</td>
+                <td class="path-cell" title="/vin-decoder/porsche">/vin-decoder/porsche</td>
+                <td><span class="badge badge-200">200 OK</span></td>
+                <td>0.35s</td>
+                <td class="error-cell">-</td>
+                <td>
+                    <a href="https://vehiclehistory.eu/vin-decoder/porsche" target="_blank" class="btn-link">Baseline</a>
+                    <a href="https://vhreu.accessautohistory.com/vin-decoder/porsche" target="_blank" class="btn-link">DEV</a>
+                </td>
+            </tr>
+            
+            <tr class="passed">
+                <td><input type="checkbox" class="row-checkbox"></td>
+                <td>✅</td>
+                <td class="path-cell" title="/vin-check/portugal">/vin-check/portugal</td>
+                <td><span class="badge badge-200">200 OK</span></td>
+                <td>0.32s</td>
+                <td class="error-cell">-</td>
+                <td>
+                    <a href="https://vehiclehistory.eu/vin-check/portugal" target="_blank" class="btn-link">Baseline</a>
+                    <a href="https://vhreu.accessautohistory.com/vin-check/portugal" target="_blank" class="btn-link">DEV</a>
+                </td>
+            </tr>
+            
+            <tr class="passed">
+                <td><input type="checkbox" class="row-checkbox"></td>
+                <td>✅</td>
+                <td class="path-cell" title="/vin-decoder/mercedes-benz">/vin-decoder/mercedes-benz</td>
+                <td><span class="badge badge-200">200 OK</span></td>
+                <td>0.32s</td>
+                <td class="error-cell">-</td>
+                <td>
+                    <a href="https://vehiclehistory.eu/vin-decoder/mercedes-benz" target="_blank" class="btn-link">Baseline</a>
+                    <a href="https://vhreu.accessautohistory.com/vin-decoder/mercedes-benz" target="_blank" class="btn-link">DEV</a>
+                </td>
+            </tr>
+            
+            <tr class="passed">
+                <td><input type="checkbox" class="row-checkbox"></td>
+                <td>✅</td>
+                <td class="path-cell" title="/vin-check/netherlands">/vin-check/netherlands</td>
+                <td><span class="badge badge-200">200 OK</span></td>
+                <td>0.36s</td>
+                <td class="error-cell">-</td>
+                <td>
+                    <a href="https://vehiclehistory.eu/vin-check/netherlands" target="_blank" class="btn-link">Baseline</a>
+                    <a href="https://vhreu.accessautohistory.com/vin-check/netherlands" target="_blank" class="btn-link">DEV</a>
+                </td>
+            </tr>
+            
+            <tr class="passed">
+                <td><input type="checkbox" class="row-checkbox"></td>
+                <td>✅</td>
+                <td class="path-cell" title="/vin-check/spain">/vin-check/spain</td>
+                <td><span class="badge badge-200">200 OK</span></td>
+                <td>0.35s</td>
+                <td class="error-cell">-</td>
+                <td>
+                    <a href="https://vehiclehistory.eu/vin-check/spain" target="_blank" class="btn-link">Baseline</a>
+                    <a href="https://vhreu.accessautohistory.com/vin-check/spain" target="_blank" class="btn-link">DEV</a>
+                </td>
+            </tr>
+            
+            <tr class="passed">
+                <td><input type="checkbox" class="row-checkbox"></td>
+                <td>✅</td>
+                <td class="path-cell" title="/vin-check/united-kingdom">/vin-check/united-kingdom</td>
+                <td><span class="badge badge-200">200 OK</span></td>
+                <td>0.31s</td>
+                <td class="error-cell">-</td>
+                <td>
+                    <a href="https://vehiclehistory.eu/vin-check/united-kingdom" target="_blank" class="btn-link">Baseline</a>
+                    <a href="https://vhreu.accessautohistory.com/vin-check/united-kingdom" target="_blank" class="btn-link">DEV</a>
+                </td>
+            </tr>
+            
+            <tr class="passed">
+                <td><input type="checkbox" class="row-checkbox"></td>
+                <td>✅</td>
+                <td class="path-cell" title="/vin-check/ukraine">/vin-check/ukraine</td>
+                <td><span class="badge badge-200">200 OK</span></td>
+                <td>0.37s</td>
+                <td class="error-cell">-</td>
+                <td>
+                    <a href="https://vehiclehistory.eu/vin-check/ukraine" target="_blank" class="btn-link">Baseline</a>
+                    <a href="https://vhreu.accessautohistory.com/vin-check/ukraine" target="_blank" class="btn-link">DEV</a>
+                </td>
+            </tr>
+            
+            <tr class="passed">
+                <td><input type="checkbox" class="row-checkbox"></td>
+                <td>✅</td>
+                <td class="path-cell" title="/de/">/de/</td>
+                <td><span class="badge badge-200">200 OK</span></td>
+                <td>0.60s</td>
+                <td class="error-cell">-</td>
+                <td>
+                    <a href="https://vehiclehistory.eu/de/" target="_blank" class="btn-link">Baseline</a>
+                    <a href="https://vhreu.accessautohistory.com/de/" target="_blank" class="btn-link">DEV</a>
+                </td>
+            </tr>
+            
+            <tr class="passed">
+                <td><input type="checkbox" class="row-checkbox"></td>
+                <td>✅</td>
+                <td class="path-cell" title="/vin-check/switzerland">/vin-check/switzerland</td>
+                <td><span class="badge badge-200">200 OK</span></td>
+                <td>0.44s</td>
+                <td class="error-cell">-</td>
+                <td>
+                    <a href="https://vehiclehistory.eu/vin-check/switzerland" target="_blank" class="btn-link">Baseline</a>
+                    <a href="https://vhreu.accessautohistory.com/vin-check/switzerland" target="_blank" class="btn-link">DEV</a>
+                </td>
+            </tr>
+            
+            <tr class="passed">
+                <td><input type="checkbox" class="row-checkbox"></td>
+                <td>✅</td>
+                <td class="path-cell" title="/vin-check/sweden">/vin-check/sweden</td>
+                <td><span class="badge badge-200">200 OK</span></td>
+                <td>0.43s</td>
+                <td class="error-cell">-</td>
+                <td>
+                    <a href="https://vehiclehistory.eu/vin-check/sweden" target="_blank" class="btn-link">Baseline</a>
+                    <a href="https://vhreu.accessautohistory.com/vin-check/sweden" target="_blank" class="btn-link">DEV</a>
+                </td>
+            </tr>
+            
+            <tr class="passed">
+                <td><input type="checkbox" class="row-checkbox"></td>
+                <td>✅</td>
+                <td class="path-cell" title="/uk/">/uk/</td>
+                <td><span class="badge badge-200">200 OK</span></td>
+                <td>0.47s</td>
+                <td class="error-cell">-</td>
+                <td>
+                    <a href="https://vehiclehistory.eu/uk/" target="_blank" class="btn-link">Baseline</a>
+                    <a href="https://vhreu.accessautohistory.com/uk/" target="_blank" class="btn-link">DEV</a>
+                </td>
+            </tr>
+            
+            <tr class="passed">
+                <td><input type="checkbox" class="row-checkbox"></td>
+                <td>✅</td>
+                <td class="path-cell" title="/ru/">/ru/</td>
+                <td><span class="badge badge-200">200 OK</span></td>
+                <td>0.52s</td>
+                <td class="error-cell">-</td>
+                <td>
+                    <a href="https://vehiclehistory.eu/ru/" target="_blank" class="btn-link">Baseline</a>
+                    <a href="https://vhreu.accessautohistory.com/ru/" target="_blank" class="btn-link">DEV</a>
+                </td>
+            </tr>
+            
+            <tr class="passed">
+                <td><input type="checkbox" class="row-checkbox"></td>
+                <td>✅</td>
+                <td class="path-cell" title="/fr/">/fr/</td>
+                <td><span class="badge badge-200">200 OK</span></td>
+                <td>0.48s</td>
+                <td class="error-cell">-</td>
+                <td>
+                    <a href="https://vehiclehistory.eu/fr/" target="_blank" class="btn-link">Baseline</a>
+                    <a href="https://vhreu.accessautohistory.com/fr/" target="_blank" class="btn-link">DEV</a>
+                </td>
+            </tr>
+            
+            <tr class="passed">
+                <td><input type="checkbox" class="row-checkbox"></td>
+                <td>✅</td>
+                <td class="path-cell" title="/it/">/it/</td>
+                <td><span class="badge badge-200">200 OK</span></td>
+                <td>0.57s</td>
+                <td class="error-cell">-</td>
+                <td>
+                    <a href="https://vehiclehistory.eu/it/" target="_blank" class="btn-link">Baseline</a>
+                    <a href="https://vhreu.accessautohistory.com/it/" target="_blank" class="btn-link">DEV</a>
+                </td>
+            </tr>
+            
+            <tr class="passed">
+                <td><input type="checkbox" class="row-checkbox"></td>
+                <td>✅</td>
+                <td class="path-cell" title="/pl/">/pl/</td>
+                <td><span class="badge badge-200">200 OK</span></td>
+                <td>0.79s</td>
+                <td class="error-cell">-</td>
+                <td>
+                    <a href="https://vehiclehistory.eu/pl/" target="_blank" class="btn-link">Baseline</a>
+                    <a href="https://vhreu.accessautohistory.com/pl/" target="_blank" class="btn-link">DEV</a>
+                </td>
+            </tr>
+            
+            <tr class="passed">
+                <td><input type="checkbox" class="row-checkbox"></td>
+                <td>✅</td>
+                <td class="path-cell" title="/vin-check/san-marino">/vin-check/san-marino</td>
+                <td><span class="badge badge-200">200 OK</span></td>
+                <td>0.38s</td>
+                <td class="error-cell">-</td>
+                <td>
+                    <a href="https://vehiclehistory.eu/vin-check/san-marino" target="_blank" class="btn-link">Baseline</a>
+                    <a href="https://vhreu.accessautohistory.com/vin-check/san-marino" target="_blank" class="btn-link">DEV</a>
+                </td>
+            </tr>
+            
+            <tr class="passed">
+                <td><input type="checkbox" class="row-checkbox"></td>
+                <td>✅</td>
+                <td class="path-cell" title="/vin-check/russia">/vin-check/russia</td>
+                <td><span class="badge badge-200">200 OK</span></td>
+                <td>0.34s</td>
+                <td class="error-cell">-</td>
+                <td>
+                    <a href="https://vehiclehistory.eu/vin-check/russia" target="_blank" class="btn-link">Baseline</a>
+                    <a href="https://vhreu.accessautohistory.com/vin-check/russia" target="_blank" class="btn-link">DEV</a>
+                </td>
+            </tr>
+            
+            <tr class="passed">
+                <td><input type="checkbox" class="row-checkbox"></td>
+                <td>✅</td>
+                <td class="path-cell" title="/vin-check/slovenia">/vin-check/slovenia</td>
+                <td><span class="badge badge-200">200 OK</span></td>
+                <td>0.70s</td>
+                <td class="error-cell">-</td>
+                <td>
+                    <a href="https://vehiclehistory.eu/vin-check/slovenia" target="_blank" class="btn-link">Baseline</a>
+                    <a href="https://vhreu.accessautohistory.com/vin-check/slovenia" target="_blank" class="btn-link">DEV</a>
+                </td>
+            </tr>
+            
+            <tr class="passed">
+                <td><input type="checkbox" class="row-checkbox"></td>
+                <td>✅</td>
+                <td class="path-cell" title="/vin-check/slovakia">/vin-check/slovakia</td>
+                <td><span class="badge badge-200">200 OK</span></td>
+                <td>0.66s</td>
+                <td class="error-cell">-</td>
+                <td>
+                    <a href="https://vehiclehistory.eu/vin-check/slovakia" target="_blank" class="btn-link">Baseline</a>
+                    <a href="https://vhreu.accessautohistory.com/vin-check/slovakia" target="_blank" class="btn-link">DEV</a>
+                </td>
+            </tr>
+            
+            <tr class="passed">
+                <td><input type="checkbox" class="row-checkbox"></td>
+                <td>✅</td>
+                <td class="path-cell" title="/vin-check/romania">/vin-check/romania</td>
+                <td><span class="badge badge-200">200 OK</span></td>
+                <td>0.41s</td>
+                <td class="error-cell">-</td>
+                <td>
+                    <a href="https://vehiclehistory.eu/vin-check/romania" target="_blank" class="btn-link">Baseline</a>
+                    <a href="https://vhreu.accessautohistory.com/vin-check/romania" target="_blank" class="btn-link">DEV</a>
+                </td>
+            </tr>
+            
+            <tr class="passed">
+                <td><input type="checkbox" class="row-checkbox"></td>
+                <td>✅</td>
+                <td class="path-cell" title="/vin-check/poland">/vin-check/poland</td>
+                <td><span class="badge badge-200">200 OK</span></td>
+                <td>0.33s</td>
+                <td class="error-cell">-</td>
+                <td>
+                    <a href="https://vehiclehistory.eu/vin-check/poland" target="_blank" class="btn-link">Baseline</a>
+                    <a href="https://vhreu.accessautohistory.com/vin-check/poland" target="_blank" class="btn-link">DEV</a>
+                </td>
+            </tr>
+            
+            <tr class="passed">
+                <td><input type="checkbox" class="row-checkbox"></td>
+                <td>✅</td>
+                <td class="path-cell" title="/vin-check/norway">/vin-check/norway</td>
+                <td><span class="badge badge-200">200 OK</span></td>
+                <td>0.51s</td>
+                <td class="error-cell">-</td>
+                <td>
+                    <a href="https://vehiclehistory.eu/vin-check/norway" target="_blank" class="btn-link">Baseline</a>
+                    <a href="https://vhreu.accessautohistory.com/vin-check/norway" target="_blank" class="btn-link">DEV</a>
+                </td>
+            </tr>
+            
+            <tr class="passed">
+                <td><input type="checkbox" class="row-checkbox"></td>
+                <td>✅</td>
+                <td class="path-cell" title="/vin-check/monaco">/vin-check/monaco</td>
+                <td><span class="badge badge-200">200 OK</span></td>
+                <td>0.42s</td>
+                <td class="error-cell">-</td>
+                <td>
+                    <a href="https://vehiclehistory.eu/vin-check/monaco" target="_blank" class="btn-link">Baseline</a>
+                    <a href="https://vhreu.accessautohistory.com/vin-check/monaco" target="_blank" class="btn-link">DEV</a>
+                </td>
+            </tr>
+            
+            <tr class="passed">
+                <td><input type="checkbox" class="row-checkbox"></td>
+                <td>✅</td>
+                <td class="path-cell" title="/vin-check/north-macedonia">/vin-check/north-macedonia</td>
+                <td><span class="badge badge-200">200 OK</span></td>
+                <td>0.52s</td>
+                <td class="error-cell">-</td>
+                <td>
+                    <a href="https://vehiclehistory.eu/vin-check/north-macedonia" target="_blank" class="btn-link">Baseline</a>
+                    <a href="https://vhreu.accessautohistory.com/vin-check/north-macedonia" target="_blank" class="btn-link">DEV</a>
+                </td>
+            </tr>
+            
+            <tr class="passed">
+                <td><input type="checkbox" class="row-checkbox"></td>
+                <td>✅</td>
+                <td class="path-cell" title="/vin-check/malta">/vin-check/malta</td>
+                <td><span class="badge badge-200">200 OK</span></td>
+                <td>0.50s</td>
+                <td class="error-cell">-</td>
+                <td>
+                    <a href="https://vehiclehistory.eu/vin-check/malta" target="_blank" class="btn-link">Baseline</a>
+                    <a href="https://vhreu.accessautohistory.com/vin-check/malta" target="_blank" class="btn-link">DEV</a>
+                </td>
+            </tr>
+            
+            <tr class="passed">
+                <td><input type="checkbox" class="row-checkbox"></td>
+                <td>✅</td>
+                <td class="path-cell" title="/vin-check/luxembourg">/vin-check/luxembourg</td>
+                <td><span class="badge badge-200">200 OK</span></td>
+                <td>0.48s</td>
+                <td class="error-cell">-</td>
+                <td>
+                    <a href="https://vehiclehistory.eu/vin-check/luxembourg" target="_blank" class="btn-link">Baseline</a>
+                    <a href="https://vhreu.accessautohistory.com/vin-check/luxembourg" target="_blank" class="btn-link">DEV</a>
+                </td>
+            </tr>
+            
+            <tr class="passed">
+                <td><input type="checkbox" class="row-checkbox"></td>
+                <td>✅</td>
+                <td class="path-cell" title="/vin-check/lithuania">/vin-check/lithuania</td>
+                <td><span class="badge badge-200">200 OK</span></td>
+                <td>0.48s</td>
+                <td class="error-cell">-</td>
+                <td>
+                    <a href="https://vehiclehistory.eu/vin-check/lithuania" target="_blank" class="btn-link">Baseline</a>
+                    <a href="https://vhreu.accessautohistory.com/vin-check/lithuania" target="_blank" class="btn-link">DEV</a>
+                </td>
+            </tr>
+            
+            <tr class="passed">
+                <td><input type="checkbox" class="row-checkbox"></td>
+                <td>✅</td>
+                <td class="path-cell" title="/es/">/es/</td>
+                <td><span class="badge badge-200">200 OK</span></td>
+                <td>0.78s</td>
+                <td class="error-cell">-</td>
+                <td>
+                    <a href="https://vehiclehistory.eu/es/" target="_blank" class="btn-link">Baseline</a>
+                    <a href="https://vhreu.accessautohistory.com/es/" target="_blank" class="btn-link">DEV</a>
+                </td>
+            </tr>
+            
+            <tr class="passed">
+                <td><input type="checkbox" class="row-checkbox"></td>
+                <td>✅</td>
+                <td class="path-cell" title="/vin-check/montenegro">/vin-check/montenegro</td>
+                <td><span class="badge badge-200">200 OK</span></td>
+                <td>0.60s</td>
+                <td class="error-cell">-</td>
+                <td>
+                    <a href="https://vehiclehistory.eu/vin-check/montenegro" target="_blank" class="btn-link">Baseline</a>
+                    <a href="https://vhreu.accessautohistory.com/vin-check/montenegro" target="_blank" class="btn-link">DEV</a>
+                </td>
+            </tr>
+            
+            <tr class="passed">
+                <td><input type="checkbox" class="row-checkbox"></td>
+                <td>✅</td>
+                <td class="path-cell" title="/vin-check/moldova">/vin-check/moldova</td>
+                <td><span class="badge badge-200">200 OK</span></td>
+                <td>0.79s</td>
+                <td class="error-cell">-</td>
+                <td>
+                    <a href="https://vehiclehistory.eu/vin-check/moldova" target="_blank" class="btn-link">Baseline</a>
+                    <a href="https://vhreu.accessautohistory.com/vin-check/moldova" target="_blank" class="btn-link">DEV</a>
+                </td>
+            </tr>
+            
+            <tr class="passed">
+                <td><input type="checkbox" class="row-checkbox"></td>
+                <td>✅</td>
+                <td class="path-cell" title="/vin-check/liechtenstein">/vin-check/liechtenstein</td>
+                <td><span class="badge badge-200">200 OK</span></td>
+                <td>0.74s</td>
+                <td class="error-cell">-</td>
+                <td>
+                    <a href="https://vehiclehistory.eu/vin-check/liechtenstein" target="_blank" class="btn-link">Baseline</a>
+                    <a href="https://vhreu.accessautohistory.com/vin-check/liechtenstein" target="_blank" class="btn-link">DEV</a>
+                </td>
+            </tr>
+            
+            <tr class="passed">
+                <td><input type="checkbox" class="row-checkbox"></td>
+                <td>✅</td>
+                <td class="path-cell" title="/vin-check/serbia">/vin-check/serbia</td>
+                <td><span class="badge badge-200">200 OK</span></td>
+                <td>0.63s</td>
+                <td class="error-cell">-</td>
+                <td>
+                    <a href="https://vehiclehistory.eu/vin-check/serbia" target="_blank" class="btn-link">Baseline</a>
+                    <a href="https://vhreu.accessautohistory.com/vin-check/serbia" target="_blank" class="btn-link">DEV</a>
+                </td>
+            </tr>
+            
+            <tr class="passed">
+                <td><input type="checkbox" class="row-checkbox"></td>
+                <td>✅</td>
+                <td class="path-cell" title="/vin-check/greece">/vin-check/greece</td>
+                <td><span class="badge badge-200">200 OK</span></td>
+                <td>0.47s</td>
+                <td class="error-cell">-</td>
+                <td>
+                    <a href="https://vehiclehistory.eu/vin-check/greece" target="_blank" class="btn-link">Baseline</a>
+                    <a href="https://vhreu.accessautohistory.com/vin-check/greece" target="_blank" class="btn-link">DEV</a>
+                </td>
+            </tr>
+            
+            <tr class="passed">
+                <td><input type="checkbox" class="row-checkbox"></td>
+                <td>✅</td>
+                <td class="path-cell" title="/vin-check/italy">/vin-check/italy</td>
+                <td><span class="badge badge-200">200 OK</span></td>
+                <td>0.67s</td>
+                <td class="error-cell">-</td>
+                <td>
+                    <a href="https://vehiclehistory.eu/vin-check/italy" target="_blank" class="btn-link">Baseline</a>
+                    <a href="https://vhreu.accessautohistory.com/vin-check/italy" target="_blank" class="btn-link">DEV</a>
+                </td>
+            </tr>
+            
+            <tr class="passed">
+                <td><input type="checkbox" class="row-checkbox"></td>
+                <td>✅</td>
+                <td class="path-cell" title="/vin-check/latvia">/vin-check/latvia</td>
+                <td><span class="badge badge-200">200 OK</span></td>
+                <td>0.68s</td>
+                <td class="error-cell">-</td>
+                <td>
+                    <a href="https://vehiclehistory.eu/vin-check/latvia" target="_blank" class="btn-link">Baseline</a>
+                    <a href="https://vhreu.accessautohistory.com/vin-check/latvia" target="_blank" class="btn-link">DEV</a>
+                </td>
+            </tr>
+            
+            <tr class="passed">
+                <td><input type="checkbox" class="row-checkbox"></td>
+                <td>✅</td>
+                <td class="path-cell" title="/vin-check/ireland">/vin-check/ireland</td>
+                <td><span class="badge badge-200">200 OK</span></td>
+                <td>0.65s</td>
+                <td class="error-cell">-</td>
+                <td>
+                    <a href="https://vehiclehistory.eu/vin-check/ireland" target="_blank" class="btn-link">Baseline</a>
+                    <a href="https://vhreu.accessautohistory.com/vin-check/ireland" target="_blank" class="btn-link">DEV</a>
+                </td>
+            </tr>
+            
+            <tr class="passed">
+                <td><input type="checkbox" class="row-checkbox"></td>
+                <td>✅</td>
+                <td class="path-cell" title="/vin-check/iceland">/vin-check/iceland</td>
+                <td><span class="badge badge-200">200 OK</span></td>
+                <td>0.64s</td>
+                <td class="error-cell">-</td>
+                <td>
+                    <a href="https://vehiclehistory.eu/vin-check/iceland" target="_blank" class="btn-link">Baseline</a>
+                    <a href="https://vhreu.accessautohistory.com/vin-check/iceland" target="_blank" class="btn-link">DEV</a>
+                </td>
+            </tr>
+            
+            <tr class="passed">
+                <td><input type="checkbox" class="row-checkbox"></td>
+                <td>✅</td>
+                <td class="path-cell" title="/vin-check/hungary">/vin-check/hungary</td>
+                <td><span class="badge badge-200">200 OK</span></td>
+                <td>0.57s</td>
+                <td class="error-cell">-</td>
+                <td>
+                    <a href="https://vehiclehistory.eu/vin-check/hungary" target="_blank" class="btn-link">Baseline</a>
+                    <a href="https://vhreu.accessautohistory.com/vin-check/hungary" target="_blank" class="btn-link">DEV</a>
+                </td>
+            </tr>
+            
+            <tr class="passed">
+                <td><input type="checkbox" class="row-checkbox"></td>
+                <td>✅</td>
+                <td class="path-cell" title="/vin-check/holy-see">/vin-check/holy-see</td>
+                <td><span class="badge badge-200">200 OK</span></td>
+                <td>0.56s</td>
+                <td class="error-cell">-</td>
+                <td>
+                    <a href="https://vehiclehistory.eu/vin-check/holy-see" target="_blank" class="btn-link">Baseline</a>
+                    <a href="https://vhreu.accessautohistory.com/vin-check/holy-see" target="_blank" class="btn-link">DEV</a>
+                </td>
+            </tr>
+            
+            <tr class="passed">
+                <td><input type="checkbox" class="row-checkbox"></td>
+                <td>✅</td>
+                <td class="path-cell" title="/vin-check/germany">/vin-check/germany</td>
+                <td><span class="badge badge-200">200 OK</span></td>
+                <td>0.40s</td>
+                <td class="error-cell">-</td>
+                <td>
+                    <a href="https://vehiclehistory.eu/vin-check/germany" target="_blank" class="btn-link">Baseline</a>
+                    <a href="https://vhreu.accessautohistory.com/vin-check/germany" target="_blank" class="btn-link">DEV</a>
+                </td>
+            </tr>
+            
+            <tr class="passed">
+                <td><input type="checkbox" class="row-checkbox"></td>
+                <td>✅</td>
+                <td class="path-cell" title="/vin-check/france">/vin-check/france</td>
+                <td><span class="badge badge-200">200 OK</span></td>
+                <td>0.66s</td>
+                <td class="error-cell">-</td>
+                <td>
+                    <a href="https://vehiclehistory.eu/vin-check/france" target="_blank" class="btn-link">Baseline</a>
+                    <a href="https://vhreu.accessautohistory.com/vin-check/france" target="_blank" class="btn-link">DEV</a>
+                </td>
+            </tr>
+            
+            <tr class="passed">
+                <td><input type="checkbox" class="row-checkbox"></td>
+                <td>✅</td>
+                <td class="path-cell" title="/vin-check/finland">/vin-check/finland</td>
+                <td><span class="badge badge-200">200 OK</span></td>
+                <td>0.69s</td>
+                <td class="error-cell">-</td>
+                <td>
+                    <a href="https://vehiclehistory.eu/vin-check/finland" target="_blank" class="btn-link">Baseline</a>
+                    <a href="https://vhreu.accessautohistory.com/vin-check/finland" target="_blank" class="btn-link">DEV</a>
+                </td>
+            </tr>
+            
+            <tr class="passed">
+                <td><input type="checkbox" class="row-checkbox"></td>
+                <td>✅</td>
+                <td class="path-cell" title="/vin-check/croatia">/vin-check/croatia</td>
+                <td><span class="badge badge-200">200 OK</span></td>
+                <td>0.58s</td>
+                <td class="error-cell">-</td>
+                <td>
+                    <a href="https://vehiclehistory.eu/vin-check/croatia" target="_blank" class="btn-link">Baseline</a>
+                    <a href="https://vhreu.accessautohistory.com/vin-check/croatia" target="_blank" class="btn-link">DEV</a>
+                </td>
+            </tr>
+            
+            <tr class="passed">
+                <td><input type="checkbox" class="row-checkbox"></td>
+                <td>✅</td>
+                <td class="path-cell" title="/vin-check/bosnia-hertzegovina">/vin-check/bosnia-hertzegovina</td>
+                <td><span class="badge badge-200">200 OK</span></td>
+                <td>0.60s</td>
+                <td class="error-cell">-</td>
+                <td>
+                    <a href="https://vehiclehistory.eu/vin-check/bosnia-hertzegovina" target="_blank" class="btn-link">Baseline</a>
+                    <a href="https://vhreu.accessautohistory.com/vin-check/bosnia-hertzegovina" target="_blank" class="btn-link">DEV</a>
+                </td>
+            </tr>
+            
+            <tr class="passed">
+                <td><input type="checkbox" class="row-checkbox"></td>
+                <td>✅</td>
+                <td class="path-cell" title="/vin-check/belarus">/vin-check/belarus</td>
+                <td><span class="badge badge-200">200 OK</span></td>
+                <td>0.59s</td>
+                <td class="error-cell">-</td>
+                <td>
+                    <a href="https://vehiclehistory.eu/vin-check/belarus" target="_blank" class="btn-link">Baseline</a>
+                    <a href="https://vhreu.accessautohistory.com/vin-check/belarus" target="_blank" class="btn-link">DEV</a>
+                </td>
+            </tr>
+            
+            <tr class="passed">
+                <td><input type="checkbox" class="row-checkbox"></td>
+                <td>✅</td>
+                <td class="path-cell" title="/vin-check/bulgaria">/vin-check/bulgaria</td>
+                <td><span class="badge badge-200">200 OK</span></td>
+                <td>0.63s</td>
+                <td class="error-cell">-</td>
+                <td>
+                    <a href="https://vehiclehistory.eu/vin-check/bulgaria" target="_blank" class="btn-link">Baseline</a>
+                    <a href="https://vhreu.accessautohistory.com/vin-check/bulgaria" target="_blank" class="btn-link">DEV</a>
+                </td>
+            </tr>
+            
+            <tr class="passed">
+                <td><input type="checkbox" class="row-checkbox"></td>
+                <td>✅</td>
+                <td class="path-cell" title="/vin-check/estonia">/vin-check/estonia</td>
+                <td><span class="badge badge-200">200 OK</span></td>
+                <td>0.81s</td>
+                <td class="error-cell">-</td>
+                <td>
+                    <a href="https://vehiclehistory.eu/vin-check/estonia" target="_blank" class="btn-link">Baseline</a>
+                    <a href="https://vhreu.accessautohistory.com/vin-check/estonia" target="_blank" class="btn-link">DEV</a>
+                </td>
+            </tr>
+            
+            <tr class="passed">
+                <td><input type="checkbox" class="row-checkbox"></td>
+                <td>✅</td>
+                <td class="path-cell" title="/vin-check/denmark">/vin-check/denmark</td>
+                <td><span class="badge badge-200">200 OK</span></td>
+                <td>0.76s</td>
+                <td class="error-cell">-</td>
+                <td>
+                    <a href="https://vehiclehistory.eu/vin-check/denmark" target="_blank" class="btn-link">Baseline</a>
+                    <a href="https://vhreu.accessautohistory.com/vin-check/denmark" target="_blank" class="btn-link">DEV</a>
+                </td>
+            </tr>
+            
+            <tr class="passed">
+                <td><input type="checkbox" class="row-checkbox"></td>
+                <td>✅</td>
+                <td class="path-cell" title="/vin-check/czech-republic">/vin-check/czech-republic</td>
+                <td><span class="badge badge-200">200 OK</span></td>
+                <td>0.76s</td>
+                <td class="error-cell">-</td>
+                <td>
+                    <a href="https://vehiclehistory.eu/vin-check/czech-republic" target="_blank" class="btn-link">Baseline</a>
+                    <a href="https://vhreu.accessautohistory.com/vin-check/czech-republic" target="_blank" class="btn-link">DEV</a>
+                </td>
+            </tr>
+            
+            <tr class="passed">
+                <td><input type="checkbox" class="row-checkbox"></td>
+                <td>✅</td>
+                <td class="path-cell" title="/vin-check/belgium">/vin-check/belgium</td>
+                <td><span class="badge badge-200">200 OK</span></td>
+                <td>0.71s</td>
+                <td class="error-cell">-</td>
+                <td>
+                    <a href="https://vehiclehistory.eu/vin-check/belgium" target="_blank" class="btn-link">Baseline</a>
+                    <a href="https://vhreu.accessautohistory.com/vin-check/belgium" target="_blank" class="btn-link">DEV</a>
+                </td>
+            </tr>
+            
+            <tr class="passed">
+                <td><input type="checkbox" class="row-checkbox"></td>
+                <td>✅</td>
+                <td class="path-cell" title="/window-sticker/ford">/window-sticker/ford</td>
+                <td><span class="badge badge-200">200 OK</span></td>
+                <td>0.59s</td>
+                <td class="error-cell">-</td>
+                <td>
+                    <a href="https://vehiclehistory.eu/window-sticker/ford" target="_blank" class="btn-link">Baseline</a>
+                    <a href="https://vhreu.accessautohistory.com/window-sticker/ford" target="_blank" class="btn-link">DEV</a>
+                </td>
+            </tr>
+            
+            <tr class="passed">
+                <td><input type="checkbox" class="row-checkbox"></td>
+                <td>✅</td>
+                <td class="path-cell" title="/window-sticker/dodge">/window-sticker/dodge</td>
+                <td><span class="badge badge-200">200 OK</span></td>
+                <td>0.54s</td>
+                <td class="error-cell">-</td>
+                <td>
+                    <a href="https://vehiclehistory.eu/window-sticker/dodge" target="_blank" class="btn-link">Baseline</a>
+                    <a href="https://vhreu.accessautohistory.com/window-sticker/dodge" target="_blank" class="btn-link">DEV</a>
+                </td>
+            </tr>
+            
+            <tr class="passed">
+                <td><input type="checkbox" class="row-checkbox"></td>
+                <td>✅</td>
+                <td class="path-cell" title="/window-sticker/toyota">/window-sticker/toyota</td>
+                <td><span class="badge badge-200">200 OK</span></td>
+                <td>0.56s</td>
+                <td class="error-cell">-</td>
+                <td>
+                    <a href="https://vehiclehistory.eu/window-sticker/toyota" target="_blank" class="btn-link">Baseline</a>
+                    <a href="https://vhreu.accessautohistory.com/window-sticker/toyota" target="_blank" class="btn-link">DEV</a>
+                </td>
+            </tr>
+            
+            <tr class="passed">
+                <td><input type="checkbox" class="row-checkbox"></td>
+                <td>✅</td>
+                <td class="path-cell" title="/window-sticker/porsche">/window-sticker/porsche</td>
+                <td><span class="badge badge-200">200 OK</span></td>
+                <td>0.61s</td>
+                <td class="error-cell">-</td>
+                <td>
+                    <a href="https://vehiclehistory.eu/window-sticker/porsche" target="_blank" class="btn-link">Baseline</a>
+                    <a href="https://vhreu.accessautohistory.com/window-sticker/porsche" target="_blank" class="btn-link">DEV</a>
+                </td>
+            </tr>
+            
+            <tr class="passed">
+                <td><input type="checkbox" class="row-checkbox"></td>
+                <td>✅</td>
+                <td class="path-cell" title="/vin-check/austria">/vin-check/austria</td>
+                <td><span class="badge badge-200">200 OK</span></td>
+                <td>0.88s</td>
+                <td class="error-cell">-</td>
+                <td>
+                    <a href="https://vehiclehistory.eu/vin-check/austria" target="_blank" class="btn-link">Baseline</a>
+                    <a href="https://vhreu.accessautohistory.com/vin-check/austria" target="_blank" class="btn-link">DEV</a>
+                </td>
+            </tr>
+            
+            <tr class="passed">
+                <td><input type="checkbox" class="row-checkbox"></td>
+                <td>✅</td>
+                <td class="path-cell" title="/vin-check/andorra">/vin-check/andorra</td>
+                <td><span class="badge badge-200">200 OK</span></td>
+                <td>0.86s</td>
+                <td class="error-cell">-</td>
+                <td>
+                    <a href="https://vehiclehistory.eu/vin-check/andorra" target="_blank" class="btn-link">Baseline</a>
+                    <a href="https://vhreu.accessautohistory.com/vin-check/andorra" target="_blank" class="btn-link">DEV</a>
+                </td>
+            </tr>
+            
+            <tr class="passed">
+                <td><input type="checkbox" class="row-checkbox"></td>
+                <td>✅</td>
+                <td class="path-cell" title="/vin-decoder">/vin-decoder</td>
+                <td><span class="badge badge-200">200 OK</span></td>
+                <td>0.77s</td>
+                <td class="error-cell">-</td>
+                <td>
+                    <a href="https://vehiclehistory.eu/vin-decoder" target="_blank" class="btn-link">Baseline</a>
+                    <a href="https://vhreu.accessautohistory.com/vin-decoder" target="_blank" class="btn-link">DEV</a>
+                </td>
+            </tr>
+            
+            <tr class="passed">
+                <td><input type="checkbox" class="row-checkbox"></td>
+                <td>✅</td>
+                <td class="path-cell" title="/vin-check/albania">/vin-check/albania</td>
+                <td><span class="badge badge-200">200 OK</span></td>
+                <td>0.81s</td>
+                <td class="error-cell">-</td>
+                <td>
+                    <a href="https://vehiclehistory.eu/vin-check/albania" target="_blank" class="btn-link">Baseline</a>
+                    <a href="https://vhreu.accessautohistory.com/vin-check/albania" target="_blank" class="btn-link">DEV</a>
+                </td>
+            </tr>
+            
+            <tr class="passed">
+                <td><input type="checkbox" class="row-checkbox"></td>
+                <td>✅</td>
+                <td class="path-cell" title="/window-sticker/subaru">/window-sticker/subaru</td>
+                <td><span class="badge badge-200">200 OK</span></td>
+                <td>0.65s</td>
+                <td class="error-cell">-</td>
+                <td>
+                    <a href="https://vehiclehistory.eu/window-sticker/subaru" target="_blank" class="btn-link">Baseline</a>
+                    <a href="https://vhreu.accessautohistory.com/window-sticker/subaru" target="_blank" class="btn-link">DEV</a>
+                </td>
+            </tr>
+            
+            <tr class="passed">
+                <td><input type="checkbox" class="row-checkbox"></td>
+                <td>✅</td>
+                <td class="path-cell" title="/window-sticker/bmw">/window-sticker/bmw</td>
+                <td><span class="badge badge-200">200 OK</span></td>
+                <td>0.50s</td>
+                <td class="error-cell">-</td>
+                <td>
+                    <a href="https://vehiclehistory.eu/window-sticker/bmw" target="_blank" class="btn-link">Baseline</a>
+                    <a href="https://vhreu.accessautohistory.com/window-sticker/bmw" target="_blank" class="btn-link">DEV</a>
+                </td>
+            </tr>
+            
+            <tr class="passed">
+                <td><input type="checkbox" class="row-checkbox"></td>
+                <td>✅</td>
+                <td class="path-cell" title="/vin-decoder/land-rover">/vin-decoder/land-rover</td>
+                <td><span class="badge badge-200">200 OK</span></td>
+                <td>0.36s</td>
+                <td class="error-cell">-</td>
+                <td>
+                    <a href="https://vehiclehistory.eu/vin-decoder/land-rover" target="_blank" class="btn-link">Baseline</a>
+                    <a href="https://vhreu.accessautohistory.com/vin-decoder/land-rover" target="_blank" class="btn-link">DEV</a>
+                </td>
+            </tr>
+            
+            <tr class="passed">
+                <td><input type="checkbox" class="row-checkbox"></td>
+                <td>✅</td>
+                <td class="path-cell" title="/vin-decoder/alfa-romeo">/vin-decoder/alfa-romeo</td>
+                <td><span class="badge badge-200">200 OK</span></td>
+                <td>0.36s</td>
+                <td class="error-cell">-</td>
+                <td>
+                    <a href="https://vehiclehistory.eu/vin-decoder/alfa-romeo" target="_blank" class="btn-link">Baseline</a>
+                    <a href="https://vhreu.accessautohistory.com/vin-decoder/alfa-romeo" target="_blank" class="btn-link">DEV</a>
+                </td>
+            </tr>
+            
+            <tr class="passed">
+                <td><input type="checkbox" class="row-checkbox"></td>
+                <td>✅</td>
+                <td class="path-cell" title="/window-sticker/chrysler">/window-sticker/chrysler</td>
+                <td><span class="badge badge-200">200 OK</span></td>
+                <td>0.51s</td>
+                <td class="error-cell">-</td>
+                <td>
+                    <a href="https://vehiclehistory.eu/window-sticker/chrysler" target="_blank" class="btn-link">Baseline</a>
+                    <a href="https://vhreu.accessautohistory.com/window-sticker/chrysler" target="_blank" class="btn-link">DEV</a>
+                </td>
+            </tr>
+            
+            <tr class="passed">
+                <td><input type="checkbox" class="row-checkbox"></td>
+                <td>✅</td>
+                <td class="path-cell" title="/window-sticker/jeep">/window-sticker/jeep</td>
+                <td><span class="badge badge-200">200 OK</span></td>
+                <td>0.39s</td>
+                <td class="error-cell">-</td>
+                <td>
+                    <a href="https://vehiclehistory.eu/window-sticker/jeep" target="_blank" class="btn-link">Baseline</a>
+                    <a href="https://vhreu.accessautohistory.com/window-sticker/jeep" target="_blank" class="btn-link">DEV</a>
+                </td>
+            </tr>
+            
+            <tr class="passed">
+                <td><input type="checkbox" class="row-checkbox"></td>
+                <td>✅</td>
+                <td class="path-cell" title="/window-sticker/hyundai">/window-sticker/hyundai</td>
+                <td><span class="badge badge-200">200 OK</span></td>
+                <td>0.60s</td>
+                <td class="error-cell">-</td>
+                <td>
+                    <a href="https://vehiclehistory.eu/window-sticker/hyundai" target="_blank" class="btn-link">Baseline</a>
+                    <a href="https://vhreu.accessautohistory.com/window-sticker/hyundai" target="_blank" class="btn-link">DEV</a>
+                </td>
+            </tr>
+            
+            <tr class="passed">
+                <td><input type="checkbox" class="row-checkbox"></td>
+                <td>✅</td>
+                <td class="path-cell" title="/window-sticker/chevrolet">/window-sticker/chevrolet</td>
+                <td><span class="badge badge-200">200 OK</span></td>
+                <td>0.47s</td>
+                <td class="error-cell">-</td>
+                <td>
+                    <a href="https://vehiclehistory.eu/window-sticker/chevrolet" target="_blank" class="btn-link">Baseline</a>
+                    <a href="https://vhreu.accessautohistory.com/window-sticker/chevrolet" target="_blank" class="btn-link">DEV</a>
+                </td>
+            </tr>
+            
+            <tr class="passed">
+                <td><input type="checkbox" class="row-checkbox"></td>
+                <td>✅</td>
+                <td class="path-cell" title="/vin-decoder/acura">/vin-decoder/acura</td>
+                <td><span class="badge badge-200">200 OK</span></td>
+                <td>0.52s</td>
+                <td class="error-cell">-</td>
+                <td>
+                    <a href="https://vehiclehistory.eu/vin-decoder/acura" target="_blank" class="btn-link">Baseline</a>
+                    <a href="https://vhreu.accessautohistory.com/vin-decoder/acura" target="_blank" class="btn-link">DEV</a>
+                </td>
+            </tr>
+            
+            <tr class="passed">
+                <td><input type="checkbox" class="row-checkbox"></td>
+                <td>✅</td>
+                <td class="path-cell" title="/window-sticker">/window-sticker</td>
+                <td><span class="badge badge-200">200 OK</span></td>
+                <td>0.36s</td>
+                <td class="error-cell">-</td>
+                <td>
+                    <a href="https://vehiclehistory.eu/window-sticker" target="_blank" class="btn-link">Baseline</a>
+                    <a href="https://vhreu.accessautohistory.com/window-sticker" target="_blank" class="btn-link">DEV</a>
+                </td>
+            </tr>
+            
+            <tr class="passed">
+                <td><input type="checkbox" class="row-checkbox"></td>
+                <td>✅</td>
+                <td class="path-cell" title="/vin-decoder/fiat">/vin-decoder/fiat</td>
+                <td><span class="badge badge-200">200 OK</span></td>
+                <td>0.35s</td>
+                <td class="error-cell">-</td>
+                <td>
+                    <a href="https://vehiclehistory.eu/vin-decoder/fiat" target="_blank" class="btn-link">Baseline</a>
+                    <a href="https://vhreu.accessautohistory.com/vin-decoder/fiat" target="_blank" class="btn-link">DEV</a>
+                </td>
+            </tr>
+            
+            <tr class="passed">
+                <td><input type="checkbox" class="row-checkbox"></td>
+                <td>✅</td>
+                <td class="path-cell" title="/vin-decoder/bmw">/vin-decoder/bmw</td>
+                <td><span class="badge badge-200">200 OK</span></td>
+                <td>0.38s</td>
+                <td class="error-cell">-</td>
+                <td>
+                    <a href="https://vehiclehistory.eu/vin-decoder/bmw" target="_blank" class="btn-link">Baseline</a>
+                    <a href="https://vhreu.accessautohistory.com/vin-decoder/bmw" target="_blank" class="btn-link">DEV</a>
+                </td>
+            </tr>
+            
+            <tr class="passed">
+                <td><input type="checkbox" class="row-checkbox"></td>
+                <td>✅</td>
+                <td class="path-cell" title="/vin-decoder/renault">/vin-decoder/renault</td>
+                <td><span class="badge badge-200">200 OK</span></td>
+                <td>0.41s</td>
+                <td class="error-cell">-</td>
+                <td>
+                    <a href="https://vehiclehistory.eu/vin-decoder/renault" target="_blank" class="btn-link">Baseline</a>
+                    <a href="https://vhreu.accessautohistory.com/vin-decoder/renault" target="_blank" class="btn-link">DEV</a>
+                </td>
+            </tr>
+            
+            <tr class="passed">
+                <td><input type="checkbox" class="row-checkbox"></td>
+                <td>✅</td>
+                <td class="path-cell" title="/vin-decoder/saab">/vin-decoder/saab</td>
+                <td><span class="badge badge-200">200 OK</span></td>
+                <td>0.42s</td>
+                <td class="error-cell">-</td>
+                <td>
+                    <a href="https://vehiclehistory.eu/vin-decoder/saab" target="_blank" class="btn-link">Baseline</a>
+                    <a href="https://vhreu.accessautohistory.com/vin-decoder/saab" target="_blank" class="btn-link">DEV</a>
+                </td>
+            </tr>
+            
+            <tr class="passed">
+                <td><input type="checkbox" class="row-checkbox"></td>
+                <td>✅</td>
+                <td class="path-cell" title="/vin-decoder/citroen">/vin-decoder/citroen</td>
+                <td><span class="badge badge-200">200 OK</span></td>
+                <td>0.39s</td>
+                <td class="error-cell">-</td>
+                <td>
+                    <a href="https://vehiclehistory.eu/vin-decoder/citroen" target="_blank" class="btn-link">Baseline</a>
+                    <a href="https://vhreu.accessautohistory.com/vin-decoder/citroen" target="_blank" class="btn-link">DEV</a>
+                </td>
+            </tr>
+            
+            <tr class="passed">
+                <td><input type="checkbox" class="row-checkbox"></td>
+                <td>✅</td>
+                <td class="path-cell" title="/vin-decoder/peugeot">/vin-decoder/peugeot</td>
+                <td><span class="badge badge-200">200 OK</span></td>
+                <td>0.36s</td>
+                <td class="error-cell">-</td>
+                <td>
+                    <a href="https://vehiclehistory.eu/vin-decoder/peugeot" target="_blank" class="btn-link">Baseline</a>
+                    <a href="https://vhreu.accessautohistory.com/vin-decoder/peugeot" target="_blank" class="btn-link">DEV</a>
+                </td>
+            </tr>
+            
+            <tr class="passed">
+                <td><input type="checkbox" class="row-checkbox"></td>
+                <td>✅</td>
+                <td class="path-cell" title="/frequently-asked-questions">/frequently-asked-questions</td>
+                <td><span class="badge badge-200">200 OK</span></td>
+                <td>0.41s</td>
+                <td class="error-cell">-</td>
+                <td>
+                    <a href="https://vehiclehistory.eu/frequently-asked-questions" target="_blank" class="btn-link">Baseline</a>
+                    <a href="https://vhreu.accessautohistory.com/frequently-asked-questions" target="_blank" class="btn-link">DEV</a>
+                </td>
+            </tr>
+            
+            <tr class="passed">
+                <td><input type="checkbox" class="row-checkbox"></td>
+                <td>✅</td>
+                <td class="path-cell" title="/vin-decoder/jaguar">/vin-decoder/jaguar</td>
+                <td><span class="badge badge-200">200 OK</span></td>
+                <td>0.50s</td>
+                <td class="error-cell">-</td>
+                <td>
+                    <a href="https://vehiclehistory.eu/vin-decoder/jaguar" target="_blank" class="btn-link">Baseline</a>
+                    <a href="https://vhreu.accessautohistory.com/vin-decoder/jaguar" target="_blank" class="btn-link">DEV</a>
+                </td>
+            </tr>
+            
+            <tr class="passed">
+                <td><input type="checkbox" class="row-checkbox"></td>
+                <td>✅</td>
+                <td class="path-cell" title="/request-a-refund">/request-a-refund</td>
+                <td><span class="badge badge-200">200 OK</span></td>
+                <td>0.23s</td>
+                <td class="error-cell">-</td>
+                <td>
+                    <a href="https://vehiclehistory.eu/request-a-refund" target="_blank" class="btn-link">Baseline</a>
+                    <a href="https://vhreu.accessautohistory.com/request-a-refund" target="_blank" class="btn-link">DEV</a>
+                </td>
+            </tr>
+            
+            <tr class="passed">
+                <td><input type="checkbox" class="row-checkbox"></td>
+                <td>✅</td>
+                <td class="path-cell" title="/privacy-policy">/privacy-policy</td>
+                <td><span class="badge badge-200">200 OK</span></td>
+                <td>0.34s</td>
+                <td class="error-cell">-</td>
+                <td>
+                    <a href="https://vehiclehistory.eu/privacy-policy" target="_blank" class="btn-link">Baseline</a>
+                    <a href="https://vhreu.accessautohistory.com/privacy-policy" target="_blank" class="btn-link">DEV</a>
+                </td>
+            </tr>
+            
+            <tr class="passed">
+                <td><input type="checkbox" class="row-checkbox"></td>
+                <td>✅</td>
+                <td class="path-cell" title="/terms-of-service">/terms-of-service</td>
+                <td><span class="badge badge-200">200 OK</span></td>
+                <td>0.31s</td>
+                <td class="error-cell">-</td>
+                <td>
+                    <a href="https://vehiclehistory.eu/terms-of-service" target="_blank" class="btn-link">Baseline</a>
+                    <a href="https://vhreu.accessautohistory.com/terms-of-service" target="_blank" class="btn-link">DEV</a>
+                </td>
+            </tr>
+            
+            <tr class="passed">
+                <td><input type="checkbox" class="row-checkbox"></td>
+                <td>✅</td>
+                <td class="path-cell" title="/sample-report">/sample-report</td>
+                <td><span class="badge badge-200">200 OK</span></td>
+                <td>0.24s</td>
+                <td class="error-cell">-</td>
+                <td>
+                    <a href="https://vehiclehistory.eu/sample-report" target="_blank" class="btn-link">Baseline</a>
+                    <a href="https://vhreu.accessautohistory.com/sample-report" target="_blank" class="btn-link">DEV</a>
+                </td>
+            </tr>
+            
+            <tr class="passed">
+                <td><input type="checkbox" class="row-checkbox"></td>
+                <td>✅</td>
+                <td class="path-cell" title="/vin-decoder/volvo">/vin-decoder/volvo</td>
+                <td><span class="badge badge-200">200 OK</span></td>
+                <td>0.46s</td>
+                <td class="error-cell">-</td>
+                <td>
+                    <a href="https://vehiclehistory.eu/vin-decoder/volvo" target="_blank" class="btn-link">Baseline</a>
+                    <a href="https://vhreu.accessautohistory.com/vin-decoder/volvo" target="_blank" class="btn-link">DEV</a>
+                </td>
+            </tr>
+            
+            <tr class="passed">
+                <td><input type="checkbox" class="row-checkbox"></td>
+                <td>✅</td>
+                <td class="path-cell" title="/contact-us">/contact-us</td>
+                <td><span class="badge badge-200">200 OK</span></td>
+                <td>0.34s</td>
+                <td class="error-cell">-</td>
+                <td>
+                    <a href="https://vehiclehistory.eu/contact-us" target="_blank" class="btn-link">Baseline</a>
+                    <a href="https://vhreu.accessautohistory.com/contact-us" target="_blank" class="btn-link">DEV</a>
+                </td>
+            </tr>
+            
+            <tr class="passed">
+                <td><input type="checkbox" class="row-checkbox"></td>
+                <td>✅</td>
+                <td class="path-cell" title="/pricing">/pricing</td>
+                <td><span class="badge badge-200">200 OK</span></td>
+                <td>0.36s</td>
+                <td class="error-cell">-</td>
+                <td>
+                    <a href="https://vehiclehistory.eu/pricing" target="_blank" class="btn-link">Baseline</a>
+                    <a href="https://vhreu.accessautohistory.com/pricing" target="_blank" class="btn-link">DEV</a>
+                </td>
+            </tr>
+            
+                </tbody>
+            </table>
+        </div>
+        
+        <div class="footer">
+            <p>Sitemap Comparison Tool | Generated with ❤️ | 2026</p>
+        </div>
+    </div>
+    
+    <script>
+        // Filter functionality
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+                
+                const filter = this.dataset.filter;
+                const rows = document.querySelectorAll('#resultsTable tbody tr');
+                
+                rows.forEach(row => {
+                    if (filter === 'all') {
+                        row.style.display = '';
+                    } else if (filter === 'passed') {
+                        row.style.display = row.classList.contains('passed') ? '' : 'none';
+                    } else if (filter === 'failed') {
+                        row.style.display = row.classList.contains('failed') ? '' : 'none';
+                    } else if (filter === 'error') {
+                        row.style.display = row.classList.contains('error') ? '' : 'none';
+                    }
+                });
+            });
+        });
+        
+        // Search functionality
+        document.getElementById('searchInput').addEventListener('keyup', function() {
+            const searchTerm = this.value.toLowerCase();
+            const rows = document.querySelectorAll('#resultsTable tbody tr');
+            
+            rows.forEach(row => {
+                const path = row.querySelector('.path-cell').textContent.toLowerCase();
+                const error = row.querySelector('.error-cell').textContent.toLowerCase();
+                
+                if (path.includes(searchTerm) || error.includes(searchTerm)) {
+                    row.style.display = '';
+                } else {
+                    row.style.display = 'none';
+                }
+            });
+        });
+        
+        // Select all functionality
+        document.getElementById('selectAll').addEventListener('change', function() {
+            const checkboxes = document.querySelectorAll('.row-checkbox');
+            checkboxes.forEach(cb => cb.checked = this.checked);
+        });
+        
+        document.getElementById('headerCheckbox').addEventListener('change', function() {
+            const checkboxes = document.querySelectorAll('.row-checkbox');
+            checkboxes.forEach(cb => cb.checked = this.checked);
+            document.getElementById('selectAll').checked = this.checked;
+        });
+        
+        // Sort table
+        function sortTable(colIndex) {
+            const table = document.getElementById('resultsTable');
+            const tbody = table.querySelector('tbody');
+            const rows = Array.from(tbody.querySelectorAll('tr'));
+            
+            const isAsc = table.dataset.sortOrder === 'asc';
+            table.dataset.sortOrder = isAsc ? 'desc' : 'asc';
+            
+            rows.sort((a, b) => {
+                let aVal = a.children[colIndex].textContent.trim();
+                let bVal = b.children[colIndex].textContent.trim();
+                
+                // Remove icons for comparison
+                aVal = aVal.replace(/[✅❌⚠️]/g, '').trim();
+                bVal = bVal.replace(/[✅❌⚠️]/g, '').trim();
+                
+                // Try numeric comparison for response time
+                if (colIndex === 4) {
+                    aVal = parseFloat(aVal) || 0;
+                    bVal = parseFloat(bVal) || 0;
+                }
+                
+                if (typeof aVal === 'number') {
+                    return isAsc ? aVal - bVal : bVal - aVal;
+                } else {
+                    return isAsc ? aVal.localeCompare(bVal) : bVal.localeCompare(aVal);
+                }
+            });
+            
+            rows.forEach(row => tbody.appendChild(row));
+        }
+        
+        // Export to CSV
+        function exportToCSV() {
+            const rows = [];
+            const headers = ['Path', 'Status', 'Response Time', 'Error/Redirect', 'Baseline URL', 'DEV URL'];
+            rows.push(headers.join(','));
+            
+            const visibleRows = Array.from(document.querySelectorAll('#resultsTable tbody tr'))
+                .filter(row => row.style.display !== 'none');
+            
+            visibleRows.forEach(row => {
+                const path = row.querySelector('.path-cell').getAttribute('title') || row.querySelector('.path-cell').textContent;
+                const status = row.querySelector('.badge').textContent;
+                const time = row.children[4].textContent;
+                const error = row.querySelector('.error-cell').textContent;
+                const baselineLink = row.querySelector('a[href*="vehiclehistory"]').href;
+                const devLink = row.querySelectorAll('a')[1].href;
+                
+                const rowData = [path, status, time, error, baselineLink, devLink];
+                rows.push(rowData.map(cell => `"${cell.replace(/"/g, '""')}"`).join(','));
+            });
+            
+            const csvContent = rows.join('\n');
+            const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
+            const link = document.createElement('a');
+            const url = URL.createObjectURL(blob);
+            
+            link.setAttribute('href', url);
+            link.setAttribute('download', 'sitemap_comparison_20260409_231057.csv');
+            link.style.visibility = 'hidden';
+            
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+        
+        // Keyboard shortcuts
+        document.addEventListener('keydown', function(e) {
+            if (e.ctrlKey && e.key === 'a') {
+                e.preventDefault();
+                document.getElementById('selectAll').checked = true;
+                document.querySelectorAll('.row-checkbox').forEach(cb => cb.checked = true);
+            }
+            if (e.ctrlKey && e.key === 'f') {
+                e.preventDefault();
+                document.getElementById('searchInput').focus();
+            }
+        });
+    </script>
+</body>
+</html>

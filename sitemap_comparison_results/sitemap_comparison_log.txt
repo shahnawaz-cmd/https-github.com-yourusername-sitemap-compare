@@ -1,0 +1,1152 @@
+================================================================================
+SITEMAP COMPARISON LOG
+Generated: 2026-04-09 23:10:57
+================================================================================
+
+SUMMARY
+----------------------------------------
+Total URLs: 126
+Passed: 126
+Failed: 0
+Errors: 0
+Average Response Time: 0.58s
+
+================================================================================
+
+DETAILED RESULTS
+----------------------------------------
+
+[1/126] /blog/best-peugeot-car
+  Baseline URL: https://vehiclehistory.eu/blog/best-peugeot-car
+  DEV URL: https://vhreu.accessautohistory.com/blog/best-peugeot-car
+  Baseline Status: 200
+  DEV Status: 200
+  Result: Passed
+  Response Time: 1.75s
+  Page Title: Best Peugeot Cars: Explore the Peugeot Road Cars All Time
+
+[2/126] /blog/how-to-check-bmw-chassis-number-explained-for-beginners
+  Baseline URL: https://vehiclehistory.eu/blog/how-to-check-bmw-chassis-number-explained-for-beginners
+  DEV URL: https://vhreu.accessautohistory.com/blog/how-to-check-bmw-chassis-number-explained-for-beginners
+  Baseline Status: 200
+  DEV Status: 200
+  Result: Passed
+  Response Time: 1.99s
+  Page Title: How to Check BMW Chassis Number: Explained for Beginners
+
+[3/126] /blog/how-to-find-service-history-of-a-car
+  Baseline URL: https://vehiclehistory.eu/blog/how-to-find-service-history-of-a-car
+  DEV URL: https://vhreu.accessautohistory.com/blog/how-to-find-service-history-of-a-car
+  Baseline Status: 200
+  DEV Status: 200
+  Result: Passed
+  Response Time: 1.77s
+  Page Title: Service History Check: Find the Service History Of A Car
+
+[4/126] /blog
+  Baseline URL: https://vehiclehistory.eu/blog
+  DEV URL: https://vhreu.accessautohistory.com/blog
+  Baseline Status: 200
+  DEV Status: 200
+  Result: Passed
+  Response Time: 1.84s
+  Page Title: Blog — Vehicle History Europe
+
+[5/126] /blog/the-truth-about-volvo-performance
+  Baseline URL: https://vehiclehistory.eu/blog/the-truth-about-volvo-performance
+  DEV URL: https://vhreu.accessautohistory.com/blog/the-truth-about-volvo-performance
+  Baseline Status: 200
+  DEV Status: 200
+  Result: Passed
+  Response Time: 1.61s
+  Page Title: Discover Volvo Performance Cars: Speed Meets Safety
+
+[6/126] /blog/best-hybrid-cars-in-ireland
+  Baseline URL: https://vehiclehistory.eu/blog/best-hybrid-cars-in-ireland
+  DEV URL: https://vhreu.accessautohistory.com/blog/best-hybrid-cars-in-ireland
+  Baseline Status: 200
+  DEV Status: 200
+  Result: Passed
+  Response Time: 1.74s
+  Page Title: 5 Best Plug-In Hybrid Cars to Buy in Ireland [2024]
+
+[7/126] /blog/cheapest-electric-car-ireland
+  Baseline URL: https://vehiclehistory.eu/blog/cheapest-electric-car-ireland
+  DEV URL: https://vhreu.accessautohistory.com/blog/cheapest-electric-car-ireland
+  Baseline Status: 200
+  DEV Status: 200
+  Result: Passed
+  Response Time: 1.64s
+  Page Title: 5 Most Affordable Electric Cars in Ireland [Updated 2026]
+
+[8/126] /blog/citroen-vin-check-free-why-its-important-and-where-to-do-it
+  Baseline URL: https://vehiclehistory.eu/blog/citroen-vin-check-free-why-its-important-and-where-to-do-it
+  DEV URL: https://vhreu.accessautohistory.com/blog/citroen-vin-check-free-why-its-important-and-where-to-do-it
+  Baseline Status: 200
+  DEV Status: 200
+  Result: Passed
+  Response Time: 1.89s
+  Page Title: Citroen VIN Check Guide – Free Lookup &amp; Key Benefits
+
+[9/126] /blog/best-citroen-car
+  Baseline URL: https://vehiclehistory.eu/blog/best-citroen-car
+  DEV URL: https://vhreu.accessautohistory.com/blog/best-citroen-car
+  Baseline Status: 200
+  DEV Status: 200
+  Result: Passed
+  Response Time: 1.82s
+  Page Title: The Best Citroën Cars of All Time: Citroen Car Reviews 2024
+
+[10/126] /blog/most-popular-car-in-poland
+  Baseline URL: https://vehiclehistory.eu/blog/most-popular-car-in-poland
+  DEV URL: https://vhreu.accessautohistory.com/blog/most-popular-car-in-poland
+  Baseline Status: 200
+  DEV Status: 200
+  Result: Passed
+  Response Time: 1.70s
+  Page Title: The Most Popular Car Models in Poland in 2026
+
+[11/126] /blog/top-european-car-brands
+  Baseline URL: https://vehiclehistory.eu/blog/top-european-car-brands
+  DEV URL: https://vhreu.accessautohistory.com/blog/top-european-car-brands
+  Baseline Status: 200
+  DEV Status: 200
+  Result: Passed
+  Response Time: 0.23s
+  Page Title: Top European Car Brands: Reliability &amp; Insights
+
+[12/126] /blog/how-many-cars-in-europe
+  Baseline URL: https://vehiclehistory.eu/blog/how-many-cars-in-europe
+  DEV URL: https://vhreu.accessautohistory.com/blog/how-many-cars-in-europe
+  Baseline Status: 200
+  DEV Status: 200
+  Result: Passed
+  Response Time: 0.32s
+  Page Title: How Many Cars Are in Europe: Passenger Cars in the EU
+
+[13/126] /blog/what-is-a-gt-car
+  Baseline URL: https://vehiclehistory.eu/blog/what-is-a-gt-car
+  DEV URL: https://vhreu.accessautohistory.com/blog/what-is-a-gt-car
+  Baseline Status: 200
+  DEV Status: 200
+  Result: Passed
+  Response Time: 0.30s
+  Page Title: What Does GT Mean on Cars? | A Complete Guide to GT Cars
+
+[14/126] /blog/what-is-good-fuel-economy-for-a-car
+  Baseline URL: https://vehiclehistory.eu/blog/what-is-good-fuel-economy-for-a-car
+  DEV URL: https://vhreu.accessautohistory.com/blog/what-is-good-fuel-economy-for-a-car
+  Baseline Status: 200
+  DEV Status: 200
+  Result: Passed
+  Response Time: 0.35s
+  Page Title: What is a Good Fuel Economy for a Car? Gas Mileage Guide
+
+[15/126] /blog/vin-cloning
+  Baseline URL: https://vehiclehistory.eu/blog/vin-cloning
+  DEV URL: https://vhreu.accessautohistory.com/blog/vin-cloning
+  Baseline Status: 200
+  DEV Status: 200
+  Result: Passed
+  Response Time: 0.36s
+  Page Title: VIN Cloning Explained: Risks, Dangers, and How to Avoid It
+
+[16/126] /blog/buying-a-car-that-was-in-an-accident
+  Baseline URL: https://vehiclehistory.eu/blog/buying-a-car-that-was-in-an-accident
+  DEV URL: https://vhreu.accessautohistory.com/blog/buying-a-car-that-was-in-an-accident
+  Baseline Status: 200
+  DEV Status: 200
+  Result: Passed
+  Response Time: 0.32s
+  Page Title: Things to Know Before Buying a Car That Was in an Accident
+
+[17/126] /blog/car-dashboard-symbols-and-meanings
+  Baseline URL: https://vehiclehistory.eu/blog/car-dashboard-symbols-and-meanings
+  DEV URL: https://vhreu.accessautohistory.com/blog/car-dashboard-symbols-and-meanings
+  Baseline Status: 200
+  DEV Status: 200
+  Result: Passed
+  Response Time: 0.38s
+  Page Title: Explain Car Dashboard Warning Lights and Symbols
+
+[18/126] /blog/how-much-over-the-speed-limit-are-you-allowed-in-ireland
+  Baseline URL: https://vehiclehistory.eu/blog/how-much-over-the-speed-limit-are-you-allowed-in-ireland
+  DEV URL: https://vhreu.accessautohistory.com/blog/how-much-over-the-speed-limit-are-you-allowed-in-ireland
+  Baseline Status: 200
+  DEV Status: 200
+  Result: Passed
+  Response Time: 0.41s
+  Page Title: National Speed Limits in Ireland that All Drivers Should Know
+
+[19/126] /blog/what-is-vin-etching
+  Baseline URL: https://vehiclehistory.eu/blog/what-is-vin-etching
+  DEV URL: https://vhreu.accessautohistory.com/blog/what-is-vin-etching
+  Baseline Status: 200
+  DEV Status: 200
+  Result: Passed
+  Response Time: 0.32s
+  Page Title: What Is VIN Etching? Benefits and How to Protect Your Car
+
+[20/126] /blog/body-control-module
+  Baseline URL: https://vehiclehistory.eu/blog/body-control-module
+  DEV URL: https://vhreu.accessautohistory.com/blog/body-control-module
+  Baseline Status: 200
+  DEV Status: 200
+  Result: Passed
+  Response Time: 0.42s
+  Page Title: Automotive Body Control Modules: Best Guide to BCM in Cars
+
+[21/126] /blog/signs-of-flood-damage-car
+  Baseline URL: https://vehiclehistory.eu/blog/signs-of-flood-damage-car
+  DEV URL: https://vhreu.accessautohistory.com/blog/signs-of-flood-damage-car
+  Baseline Status: 200
+  DEV Status: 200
+  Result: Passed
+  Response Time: 0.33s
+  Page Title: Signs of Flood Damage in a Car: How to Spot in a Used Car
+
+[22/126] /blog/best-vauxhall-car
+  Baseline URL: https://vehiclehistory.eu/blog/best-vauxhall-car
+  DEV URL: https://vhreu.accessautohistory.com/blog/best-vauxhall-car
+  Baseline Status: 200
+  DEV Status: 200
+  Result: Passed
+  Response Time: 0.24s
+  Page Title: Best Vauxhall Cars of All Time: Vauxhall Car Review 2024
+
+[23/126] /blog/where-to-find-vin-number-on-car
+  Baseline URL: https://vehiclehistory.eu/blog/where-to-find-vin-number-on-car
+  DEV URL: https://vhreu.accessautohistory.com/blog/where-to-find-vin-number-on-car
+  Baseline Status: 200
+  DEV Status: 200
+  Result: Passed
+  Response Time: 0.31s
+  Page Title: Where to Find the VIN Number or Chassis Number on Your Car
+
+[24/126] /blog/what-is-the-best-used-suv-to-buy-in
+  Baseline URL: https://vehiclehistory.eu/blog/what-is-the-best-used-suv-to-buy-in
+  DEV URL: https://vhreu.accessautohistory.com/blog/what-is-the-best-used-suv-to-buy-in
+  Baseline Status: 200
+  DEV Status: 200
+  Result: Passed
+  Response Time: 0.27s
+  Page Title: What is the best used SUV Cars to buy in 2026
+
+[25/126] /blog/best-family-suv-2024
+  Baseline URL: https://vehiclehistory.eu/blog/best-family-suv-2024
+  DEV URL: https://vhreu.accessautohistory.com/blog/best-family-suv-2024
+  Baseline Status: 200
+  DEV Status: 200
+  Result: Passed
+  Response Time: 0.27s
+  Page Title: Best Family SUVs 2024: Find the Best SUVs to Buy in 2024
+
+[26/126] /blog/how-to-check-equipment-by-vin-number
+  Baseline URL: https://vehiclehistory.eu/blog/how-to-check-equipment-by-vin-number
+  DEV URL: https://vhreu.accessautohistory.com/blog/how-to-check-equipment-by-vin-number
+  Baseline Status: 200
+  DEV Status: 200
+  Result: Passed
+  Response Time: 0.27s
+  Page Title: How to Check Equipment by VIN Number Online
+
+[27/126] /blog/how-to-check-how-many-owners-a-car-has-had
+  Baseline URL: https://vehiclehistory.eu/blog/how-to-check-how-many-owners-a-car-has-had
+  DEV URL: https://vhreu.accessautohistory.com/blog/how-to-check-how-many-owners-a-car-has-had
+  Baseline Status: 200
+  DEV Status: 200
+  Result: Passed
+  Response Time: 0.34s
+  Page Title: How to Check the Number Of Previous Owners A Car Has Had
+
+[28/126] /blog/what-is-considered-bad-gas-mileage
+  Baseline URL: https://vehiclehistory.eu/blog/what-is-considered-bad-gas-mileage
+  DEV URL: https://vhreu.accessautohistory.com/blog/what-is-considered-bad-gas-mileage
+  Baseline Status: 200
+  DEV Status: 200
+  Result: Passed
+  Response Time: 0.31s
+  Page Title: What is Considered Bad Gas Mileage? Car MPG Explained
+
+[29/126] /blog/why-a-mileage-check-is-crucial-when-buying-a-used-car
+  Baseline URL: https://vehiclehistory.eu/blog/why-a-mileage-check-is-crucial-when-buying-a-used-car
+  DEV URL: https://vhreu.accessautohistory.com/blog/why-a-mileage-check-is-crucial-when-buying-a-used-car
+  Baseline Status: 200
+  DEV Status: 200
+  Result: Passed
+  Response Time: 0.33s
+  Page Title: Used Car Mileage Check: Why It Matters Before You Buy
+
+[30/126] /blog/best-used-electric-cars
+  Baseline URL: https://vehiclehistory.eu/blog/best-used-electric-cars
+  DEV URL: https://vhreu.accessautohistory.com/blog/best-used-electric-cars
+  Baseline Status: 200
+  DEV Status: 200
+  Result: Passed
+  Response Time: 0.35s
+  Page Title: Best Used Electric Cars For Sale: Top Used EVs in 2024
+
+[31/126] /blog/why-a-hyundai-vin-check-is-crucial-before-you-buy-a-used-car-in-europe
+  Baseline URL: https://vehiclehistory.eu/blog/why-a-hyundai-vin-check-is-crucial-before-you-buy-a-used-car-in-europe
+  DEV URL: https://vhreu.accessautohistory.com/blog/why-a-hyundai-vin-check-is-crucial-before-you-buy-a-used-car-in-europe
+  Baseline Status: 200
+  DEV Status: 200
+  Result: Passed
+  Response Time: 0.34s
+  Page Title: Why You Need a Hyundai VIN Check Before Buying Used
+
+[32/126] /blog/what-is-the-best-site-to-check-the-vin-number
+  Baseline URL: https://vehiclehistory.eu/blog/what-is-the-best-site-to-check-the-vin-number
+  DEV URL: https://vhreu.accessautohistory.com/blog/what-is-the-best-site-to-check-the-vin-number
+  Baseline Status: 200
+  DEV Status: 200
+  Result: Passed
+  Response Time: 0.29s
+  Page Title: What Is the Best Site to Check a VIN Number in ?
+
+[33/126] /blog/how-to-check-engine-size-by-vin-number
+  Baseline URL: https://vehiclehistory.eu/blog/how-to-check-engine-size-by-vin-number
+  DEV URL: https://vhreu.accessautohistory.com/blog/how-to-check-engine-size-by-vin-number
+  Baseline Status: 200
+  DEV Status: 200
+  Result: Passed
+  Response Time: 0.49s
+  Page Title: How to Check Engine Size by VIN Number Online
+
+[34/126] /blog/electrifying-savings-finding-the-cheapest-electric-car-in-ireland
+  Baseline URL: https://vehiclehistory.eu/blog/electrifying-savings-finding-the-cheapest-electric-car-in-ireland
+  DEV URL: https://vhreu.accessautohistory.com/blog/electrifying-savings-finding-the-cheapest-electric-car-in-ireland
+  Baseline Status: 200
+  DEV Status: 200
+  Result: Passed
+  Response Time: 0.35s
+  Page Title: Finding the Cheapest Electric Car in Ireland: A Buyer’s Guide
+
+[35/126] /blog/european-car-check-tools-7-essential-resources-for-every-european-car-owner
+  Baseline URL: https://vehiclehistory.eu/blog/european-car-check-tools-7-essential-resources-for-every-european-car-owner
+  DEV URL: https://vhreu.accessautohistory.com/blog/european-car-check-tools-7-essential-resources-for-every-european-car-owner
+  Baseline Status: 200
+  DEV Status: 200
+  Result: Passed
+  Response Time: 0.36s
+  Page Title: European Car Check Tools: 7 Must-Have Resources for Owners
+
+[36/126] /blog/the-check-engine-light-on-car-what-does-it-mean
+  Baseline URL: https://vehiclehistory.eu/blog/the-check-engine-light-on-car-what-does-it-mean
+  DEV URL: https://vhreu.accessautohistory.com/blog/the-check-engine-light-on-car-what-does-it-mean
+  Baseline Status: 200
+  DEV Status: 200
+  Result: Passed
+  Response Time: 0.39s
+  Page Title: The Check Engine Light on Car: Explained for beginners
+
+[37/126] /
+  Baseline URL: https://vehiclehistory.eu/
+  DEV URL: https://vhreu.accessautohistory.com
+  Baseline Status: 200
+  DEV Status: 200
+  Result: Passed
+  Response Time: 0.42s
+  Page Title: Free VIN Check Europe - Vehicle History Report by VIN Number
+
+[38/126] /blog/how-to-jump-start-a-car-a-comprehensive-guide
+  Baseline URL: https://vehiclehistory.eu/blog/how-to-jump-start-a-car-a-comprehensive-guide
+  DEV URL: https://vhreu.accessautohistory.com/blog/how-to-jump-start-a-car-a-comprehensive-guide
+  Baseline Status: 200
+  DEV Status: 200
+  Result: Passed
+  Response Time: 0.59s
+  Page Title: How to Jump Start a Car Safely – Complete Guide
+
+[39/126] /blog/how-much-does-it-cost-to-charge-an-electric-car-in-ireland
+  Baseline URL: https://vehiclehistory.eu/blog/how-much-does-it-cost-to-charge-an-electric-car-in-ireland
+  DEV URL: https://vhreu.accessautohistory.com/blog/how-much-does-it-cost-to-charge-an-electric-car-in-ireland
+  Baseline Status: 200
+  DEV Status: 200
+  Result: Passed
+  Response Time: 0.53s
+  Page Title: How Much Does It Cost To Charge An Electric Car in Ireland?
+
+[40/126] /blog/tips-for-securing-your-vehicle-at-night
+  Baseline URL: https://vehiclehistory.eu/blog/tips-for-securing-your-vehicle-at-night
+  DEV URL: https://vhreu.accessautohistory.com/blog/tips-for-securing-your-vehicle-at-night
+  Baseline Status: 200
+  DEV Status: 200
+  Result: Passed
+  Response Time: 0.56s
+  Page Title: Tips for Securing Your Vehicle at Night to Prevent Car Theft
+
+[41/126] /vin-decoder/audi
+  Baseline URL: https://vehiclehistory.eu/vin-decoder/audi
+  DEV URL: https://vhreu.accessautohistory.com/vin-decoder/audi
+  Baseline Status: 200
+  DEV Status: 200
+  Result: Passed
+  Response Time: 0.36s
+  Page Title: Audi VIN Decoder – Lookup Audi VIN Number Check Europe
+
+[42/126] /vin-decoder/mini
+  Baseline URL: https://vehiclehistory.eu/vin-decoder/mini
+  DEV URL: https://vhreu.accessautohistory.com/vin-decoder/mini
+  Baseline Status: 200
+  DEV Status: 200
+  Result: Passed
+  Response Time: 0.62s
+  Page Title: MINI VIN Decoder: Lookup Vehicle History by VIN Number
+
+[43/126] /vin-decoder/volkswagen
+  Baseline URL: https://vehiclehistory.eu/vin-decoder/volkswagen
+  DEV URL: https://vhreu.accessautohistory.com/vin-decoder/volkswagen
+  Baseline Status: 200
+  DEV Status: 200
+  Result: Passed
+  Response Time: 0.59s
+  Page Title: Volkswagen VIN Decoder - Get Vehicle History by VIN Number
+
+[44/126] /vin-decoder/porsche
+  Baseline URL: https://vehiclehistory.eu/vin-decoder/porsche
+  DEV URL: https://vhreu.accessautohistory.com/vin-decoder/porsche
+  Baseline Status: 200
+  DEV Status: 200
+  Result: Passed
+  Response Time: 0.35s
+  Page Title: Porsche VIN Decoder - Get Vehicle History by VIN Number
+
+[45/126] /vin-check/portugal
+  Baseline URL: https://vehiclehistory.eu/vin-check/portugal
+  DEV URL: https://vhreu.accessautohistory.com/vin-check/portugal
+  Baseline Status: 200
+  DEV Status: 200
+  Result: Passed
+  Response Time: 0.32s
+  Page Title: Portugal VIN Check: Check Mileage &amp; Maintenance History 🚗
+
+[46/126] /vin-decoder/mercedes-benz
+  Baseline URL: https://vehiclehistory.eu/vin-decoder/mercedes-benz
+  DEV URL: https://vhreu.accessautohistory.com/vin-decoder/mercedes-benz
+  Baseline Status: 200
+  DEV Status: 200
+  Result: Passed
+  Response Time: 0.32s
+  Page Title: Mercedes VIN Decoder - Check Vehicle History by VIN
+
+[47/126] /vin-check/netherlands
+  Baseline URL: https://vehiclehistory.eu/vin-check/netherlands
+  DEV URL: https://vhreu.accessautohistory.com/vin-check/netherlands
+  Baseline Status: 200
+  DEV Status: 200
+  Result: Passed
+  Response Time: 0.36s
+  Page Title: Netherlands VIN Check: Check Origin and Accident History
+
+[48/126] /vin-check/spain
+  Baseline URL: https://vehiclehistory.eu/vin-check/spain
+  DEV URL: https://vhreu.accessautohistory.com/vin-check/spain
+  Baseline Status: 200
+  DEV Status: 200
+  Result: Passed
+  Response Time: 0.35s
+  Page Title: Spain VIN Check – Spot Odometer Rollback &amp; Damage Records
+
+[49/126] /vin-check/united-kingdom
+  Baseline URL: https://vehiclehistory.eu/vin-check/united-kingdom
+  DEV URL: https://vhreu.accessautohistory.com/vin-check/united-kingdom
+  Baseline Status: 200
+  DEV Status: 200
+  Result: Passed
+  Response Time: 0.31s
+  Page Title: UK VIN Check - Access Vehicle History on Imported Cars
+
+[50/126] /vin-check/ukraine
+  Baseline URL: https://vehiclehistory.eu/vin-check/ukraine
+  DEV URL: https://vhreu.accessautohistory.com/vin-check/ukraine
+  Baseline Status: 200
+  DEV Status: 200
+  Result: Passed
+  Response Time: 0.37s
+  Page Title: Ukraine VIN Check: Check Mileage &amp; Country of Origin 🚗
+
+[51/126] /de/
+  Baseline URL: https://vehiclehistory.eu/de/
+  DEV URL: https://vhreu.accessautohistory.com/de/
+  Baseline Status: 200
+  DEV Status: 200
+  Result: Passed
+  Response Time: 0.60s
+  Page Title: Kostenlose VIN-Prüfung Europa - Fahrzeughistorienbericht nach Fahrgestellnummer
+
+[52/126] /vin-check/switzerland
+  Baseline URL: https://vehiclehistory.eu/vin-check/switzerland
+  DEV URL: https://vhreu.accessautohistory.com/vin-check/switzerland
+  Baseline Status: 200
+  DEV Status: 200
+  Result: Passed
+  Response Time: 0.44s
+  Page Title: Switzerland VIN Check: Check Mileage &amp; Damage History 🚗
+
+[53/126] /vin-check/sweden
+  Baseline URL: https://vehiclehistory.eu/vin-check/sweden
+  DEV URL: https://vhreu.accessautohistory.com/vin-check/sweden
+  Baseline Status: 200
+  DEV Status: 200
+  Result: Passed
+  Response Time: 0.43s
+  Page Title: Sweden VIN Check - Get Complete Car Details &amp; History
+
+[54/126] /uk/
+  Baseline URL: https://vehiclehistory.eu/uk/
+  DEV URL: https://vhreu.accessautohistory.com/uk/
+  Baseline Status: 200
+  DEV Status: 200
+  Result: Passed
+  Response Time: 0.47s
+  Page Title: Безкоштовна перевірка VIN Європа - Звіт про історію автомобіля
+
+[55/126] /ru/
+  Baseline URL: https://vehiclehistory.eu/ru/
+  DEV URL: https://vhreu.accessautohistory.com/ru/
+  Baseline Status: 200
+  DEV Status: 200
+  Result: Passed
+  Response Time: 0.52s
+  Page Title: Бесплатная проверка VIN Европа - Отчёт об истории автомобиля
+
+[56/126] /fr/
+  Baseline URL: https://vehiclehistory.eu/fr/
+  DEV URL: https://vhreu.accessautohistory.com/fr/
+  Baseline Status: 200
+  DEV Status: 200
+  Result: Passed
+  Response Time: 0.48s
+  Page Title: Vérification gratuite du VIN Europe - Rapport d&#x27;historique du véhicule
+
+[57/126] /it/
+  Baseline URL: https://vehiclehistory.eu/it/
+  DEV URL: https://vhreu.accessautohistory.com/it/
+  Baseline Status: 200
+  DEV Status: 200
+  Result: Passed
+  Response Time: 0.57s
+  Page Title: Controllo gratuito del VIN Europa - Rapporto sulla storia del veicolo
+
+[58/126] /pl/
+  Baseline URL: https://vehiclehistory.eu/pl/
+  DEV URL: https://vhreu.accessautohistory.com/pl/
+  Baseline Status: 200
+  DEV Status: 200
+  Result: Passed
+  Response Time: 0.79s
+  Page Title: Bezpłatne sprawdzenie VIN Europa - Raport historii pojazdu
+
+[59/126] /vin-check/san-marino
+  Baseline URL: https://vehiclehistory.eu/vin-check/san-marino
+  DEV URL: https://vhreu.accessautohistory.com/vin-check/san-marino
+  Baseline Status: 200
+  DEV Status: 200
+  Result: Passed
+  Response Time: 0.38s
+  Page Title: San Marino VIN Check – Get Complete Vehicle History by VIN
+
+[60/126] /vin-check/russia
+  Baseline URL: https://vehiclehistory.eu/vin-check/russia
+  DEV URL: https://vhreu.accessautohistory.com/vin-check/russia
+  Baseline Status: 200
+  DEV Status: 200
+  Result: Passed
+  Response Time: 0.34s
+  Page Title: Russia VIN Check: Check Vehicle’s Records in Seconds
+
+[61/126] /vin-check/slovenia
+  Baseline URL: https://vehiclehistory.eu/vin-check/slovenia
+  DEV URL: https://vhreu.accessautohistory.com/vin-check/slovenia
+  Baseline Status: 200
+  DEV Status: 200
+  Result: Passed
+  Response Time: 0.70s
+  Page Title: Slovenia VIN Check - Get Full Vehicle History Reports Fast
+
+[62/126] /vin-check/slovakia
+  Baseline URL: https://vehiclehistory.eu/vin-check/slovakia
+  DEV URL: https://vhreu.accessautohistory.com/vin-check/slovakia
+  Baseline Status: 200
+  DEV Status: 200
+  Result: Passed
+  Response Time: 0.66s
+  Page Title: Slovakia VIN Check – Check Vehicle’s Origin &amp; Owner History
+
+[63/126] /vin-check/romania
+  Baseline URL: https://vehiclehistory.eu/vin-check/romania
+  DEV URL: https://vhreu.accessautohistory.com/vin-check/romania
+  Baseline Status: 200
+  DEV Status: 200
+  Result: Passed
+  Response Time: 0.41s
+  Page Title: Romania VIN Check: Check Origin and Mileage Records 🚗
+
+[64/126] /vin-check/poland
+  Baseline URL: https://vehiclehistory.eu/vin-check/poland
+  DEV URL: https://vhreu.accessautohistory.com/vin-check/poland
+  Baseline Status: 200
+  DEV Status: 200
+  Result: Passed
+  Response Time: 0.33s
+  Page Title: Poland VIN Check – Check Vehicle’s Year &amp; Odometer 🚗
+
+[65/126] /vin-check/norway
+  Baseline URL: https://vehiclehistory.eu/vin-check/norway
+  DEV URL: https://vhreu.accessautohistory.com/vin-check/norway
+  Baseline Status: 200
+  DEV Status: 200
+  Result: Passed
+  Response Time: 0.51s
+  Page Title: Norway VIN Check - Get Instant Vehicle History Report Online
+
+[66/126] /vin-check/monaco
+  Baseline URL: https://vehiclehistory.eu/vin-check/monaco
+  DEV URL: https://vhreu.accessautohistory.com/vin-check/monaco
+  Baseline Status: 200
+  DEV Status: 200
+  Result: Passed
+  Response Time: 0.42s
+  Page Title: Monaco VIN Check - Accident, Theft, and Title Information
+
+[67/126] /vin-check/north-macedonia
+  Baseline URL: https://vehiclehistory.eu/vin-check/north-macedonia
+  DEV URL: https://vhreu.accessautohistory.com/vin-check/north-macedonia
+  Baseline Status: 200
+  DEV Status: 200
+  Result: Passed
+  Response Time: 0.52s
+  Page Title: North Macedonia VIN Check – Examine Vehicle Age 🚗
+
+[68/126] /vin-check/malta
+  Baseline URL: https://vehiclehistory.eu/vin-check/malta
+  DEV URL: https://vhreu.accessautohistory.com/vin-check/malta
+  Baseline Status: 200
+  DEV Status: 200
+  Result: Passed
+  Response Time: 0.50s
+  Page Title: Malta VIN Check - Title Status, Accident &amp; Theft Records
+
+[69/126] /vin-check/luxembourg
+  Baseline URL: https://vehiclehistory.eu/vin-check/luxembourg
+  DEV URL: https://vhreu.accessautohistory.com/vin-check/luxembourg
+  Baseline Status: 200
+  DEV Status: 200
+  Result: Passed
+  Response Time: 0.48s
+  Page Title: Luxembourg VIN Check - Get any Vehicle History by VIN 🚗
+
+[70/126] /vin-check/lithuania
+  Baseline URL: https://vehiclehistory.eu/vin-check/lithuania
+  DEV URL: https://vhreu.accessautohistory.com/vin-check/lithuania
+  Baseline Status: 200
+  DEV Status: 200
+  Result: Passed
+  Response Time: 0.48s
+  Page Title: Lithuania VIN Check - Get Title, Accident &amp; Mileage Records
+
+[71/126] /es/
+  Baseline URL: https://vehiclehistory.eu/es/
+  DEV URL: https://vhreu.accessautohistory.com/es/
+  Baseline Status: 200
+  DEV Status: 200
+  Result: Passed
+  Response Time: 0.78s
+  Page Title: Comprobación gratuita del VIN Europa - Informe del historial del vehículo
+
+[72/126] /vin-check/montenegro
+  Baseline URL: https://vehiclehistory.eu/vin-check/montenegro
+  DEV URL: https://vhreu.accessautohistory.com/vin-check/montenegro
+  Baseline Status: 200
+  DEV Status: 200
+  Result: Passed
+  Response Time: 0.60s
+  Page Title: Montenegro VIN Check: Check Country of Origin and Age
+
+[73/126] /vin-check/moldova
+  Baseline URL: https://vehiclehistory.eu/vin-check/moldova
+  DEV URL: https://vhreu.accessautohistory.com/vin-check/moldova
+  Baseline Status: 200
+  DEV Status: 200
+  Result: Passed
+  Response Time: 0.79s
+  Page Title: Moldova VIN Check - Get Complete Vehicle History Reports
+
+[74/126] /vin-check/liechtenstein
+  Baseline URL: https://vehiclehistory.eu/vin-check/liechtenstein
+  DEV URL: https://vhreu.accessautohistory.com/vin-check/liechtenstein
+  Baseline Status: 200
+  DEV Status: 200
+  Result: Passed
+  Response Time: 0.74s
+  Page Title: Liechtenstein VIN Check - Accident History &amp; Title Check
+
+[75/126] /vin-check/serbia
+  Baseline URL: https://vehiclehistory.eu/vin-check/serbia
+  DEV URL: https://vhreu.accessautohistory.com/vin-check/serbia
+  Baseline Status: 200
+  DEV Status: 200
+  Result: Passed
+  Response Time: 0.63s
+  Page Title: Serbia VIN Check: Check Vehicle History &amp; Mileage Records
+
+[76/126] /vin-check/greece
+  Baseline URL: https://vehiclehistory.eu/vin-check/greece
+  DEV URL: https://vhreu.accessautohistory.com/vin-check/greece
+  Baseline Status: 200
+  DEV Status: 200
+  Result: Passed
+  Response Time: 0.47s
+  Page Title: Greece VIN Check - Lookup Accident History, Theft &amp; More
+
+[77/126] /vin-check/italy
+  Baseline URL: https://vehiclehistory.eu/vin-check/italy
+  DEV URL: https://vhreu.accessautohistory.com/vin-check/italy
+  Baseline Status: 200
+  DEV Status: 200
+  Result: Passed
+  Response Time: 0.67s
+  Page Title: Italy VIN Check | Get Vehicle History Report &amp; Specification
+
+[78/126] /vin-check/latvia
+  Baseline URL: https://vehiclehistory.eu/vin-check/latvia
+  DEV URL: https://vhreu.accessautohistory.com/vin-check/latvia
+  Baseline Status: 200
+  DEV Status: 200
+  Result: Passed
+  Response Time: 0.68s
+  Page Title: Latvia VIN Check - Free VIN Decoder &amp; Vehicle History Check
+
+[79/126] /vin-check/ireland
+  Baseline URL: https://vehiclehistory.eu/vin-check/ireland
+  DEV URL: https://vhreu.accessautohistory.com/vin-check/ireland
+  Baseline Status: 200
+  DEV Status: 200
+  Result: Passed
+  Response Time: 0.65s
+  Page Title: VIN Check Ireland – Verify Used Car History Instantly
+
+[80/126] /vin-check/iceland
+  Baseline URL: https://vehiclehistory.eu/vin-check/iceland
+  DEV URL: https://vhreu.accessautohistory.com/vin-check/iceland
+  Baseline Status: 200
+  DEV Status: 200
+  Result: Passed
+  Response Time: 0.64s
+  Page Title: Iceland VIN Check – Check Vehicle’s Odometer Reading🚗
+
+[81/126] /vin-check/hungary
+  Baseline URL: https://vehiclehistory.eu/vin-check/hungary
+  DEV URL: https://vhreu.accessautohistory.com/vin-check/hungary
+  Baseline Status: 200
+  DEV Status: 200
+  Result: Passed
+  Response Time: 0.57s
+  Page Title: Hungary VIN Check - Instant Vehicle History Check 🚗
+
+[82/126] /vin-check/holy-see
+  Baseline URL: https://vehiclehistory.eu/vin-check/holy-see
+  DEV URL: https://vhreu.accessautohistory.com/vin-check/holy-see
+  Baseline Status: 200
+  DEV Status: 200
+  Result: Passed
+  Response Time: 0.56s
+  Page Title: Holy See VIN Check: Lookup Vehicle Specs &amp; Past Records
+
+[83/126] /vin-check/germany
+  Baseline URL: https://vehiclehistory.eu/vin-check/germany
+  DEV URL: https://vhreu.accessautohistory.com/vin-check/germany
+  Baseline Status: 200
+  DEV Status: 200
+  Result: Passed
+  Response Time: 0.40s
+  Page Title: Germany VIN Check: Check Vehicle’s Past History in Seconds
+
+[84/126] /vin-check/france
+  Baseline URL: https://vehiclehistory.eu/vin-check/france
+  DEV URL: https://vhreu.accessautohistory.com/vin-check/france
+  Baseline Status: 200
+  DEV Status: 200
+  Result: Passed
+  Response Time: 0.66s
+  Page Title: France VIN Check – Check Origin and Damage History 🚗
+
+[85/126] /vin-check/finland
+  Baseline URL: https://vehiclehistory.eu/vin-check/finland
+  DEV URL: https://vhreu.accessautohistory.com/vin-check/finland
+  Baseline Status: 200
+  DEV Status: 200
+  Result: Passed
+  Response Time: 0.69s
+  Page Title: Finland VIN Check - Get Complete Vehicle History Reports
+
+[86/126] /vin-check/croatia
+  Baseline URL: https://vehiclehistory.eu/vin-check/croatia
+  DEV URL: https://vhreu.accessautohistory.com/vin-check/croatia
+  Baseline Status: 200
+  DEV Status: 200
+  Result: Passed
+  Response Time: 0.58s
+  Page Title: Croatia VIN Check - Accident, Mileage, and Theft Records
+
+[87/126] /vin-check/bosnia-hertzegovina
+  Baseline URL: https://vehiclehistory.eu/vin-check/bosnia-hertzegovina
+  DEV URL: https://vhreu.accessautohistory.com/vin-check/bosnia-hertzegovina
+  Baseline Status: 200
+  DEV Status: 200
+  Result: Passed
+  Response Time: 0.60s
+  Page Title: Check Car’s Origin with Bosnia and Herzegovina VIN Check
+
+[88/126] /vin-check/belarus
+  Baseline URL: https://vehiclehistory.eu/vin-check/belarus
+  DEV URL: https://vhreu.accessautohistory.com/vin-check/belarus
+  Baseline Status: 200
+  DEV Status: 200
+  Result: Passed
+  Response Time: 0.59s
+  Page Title: Belarus VIN Check: Check Mileage &amp; Damage History 🚗
+
+[89/126] /vin-check/bulgaria
+  Baseline URL: https://vehiclehistory.eu/vin-check/bulgaria
+  DEV URL: https://vhreu.accessautohistory.com/vin-check/bulgaria
+  Baseline Status: 200
+  DEV Status: 200
+  Result: Passed
+  Response Time: 0.63s
+  Page Title: Bulgaria VIN Check: Check Year of Manufacture &amp; Mileage
+
+[90/126] /vin-check/estonia
+  Baseline URL: https://vehiclehistory.eu/vin-check/estonia
+  DEV URL: https://vhreu.accessautohistory.com/vin-check/estonia
+  Baseline Status: 200
+  DEV Status: 200
+  Result: Passed
+  Response Time: 0.81s
+  Page Title: Estonia VIN Check: Check Title Status &amp; Damage Records
+
+[91/126] /vin-check/denmark
+  Baseline URL: https://vehiclehistory.eu/vin-check/denmark
+  DEV URL: https://vhreu.accessautohistory.com/vin-check/denmark
+  Baseline Status: 200
+  DEV Status: 200
+  Result: Passed
+  Response Time: 0.76s
+  Page Title: Denmark VIN Check - Get Instant Vehicle History Reports
+
+[92/126] /vin-check/czech-republic
+  Baseline URL: https://vehiclehistory.eu/vin-check/czech-republic
+  DEV URL: https://vhreu.accessautohistory.com/vin-check/czech-republic
+  Baseline Status: 200
+  DEV Status: 200
+  Result: Passed
+  Response Time: 0.76s
+  Page Title: Czech VIN Check: Check the Odometer Reading in Seconds 🚗
+
+[93/126] /vin-check/belgium
+  Baseline URL: https://vehiclehistory.eu/vin-check/belgium
+  DEV URL: https://vhreu.accessautohistory.com/vin-check/belgium
+  Baseline Status: 200
+  DEV Status: 200
+  Result: Passed
+  Response Time: 0.71s
+  Page Title: Belgium VIN Check: Check Mileage &amp; Maintenance History 🚗
+
+[94/126] /window-sticker/ford
+  Baseline URL: https://vehiclehistory.eu/window-sticker/ford
+  DEV URL: https://vhreu.accessautohistory.com/window-sticker/ford
+  Baseline Status: 200
+  DEV Status: 200
+  Result: Passed
+  Response Time: 0.59s
+  Page Title: Ford Window Sticker Lookup: Check Used Ford&#x27;s Original Build
+
+[95/126] /window-sticker/dodge
+  Baseline URL: https://vehiclehistory.eu/window-sticker/dodge
+  DEV URL: https://vhreu.accessautohistory.com/window-sticker/dodge
+  Baseline Status: 200
+  DEV Status: 200
+  Result: Passed
+  Response Time: 0.54s
+  Page Title: Check Dodge Window Sticker by VIN: Original Specs &amp; MSRP
+
+[96/126] /window-sticker/toyota
+  Baseline URL: https://vehiclehistory.eu/window-sticker/toyota
+  DEV URL: https://vhreu.accessautohistory.com/window-sticker/toyota
+  Baseline Status: 200
+  DEV Status: 200
+  Result: Passed
+  Response Time: 0.56s
+  Page Title: Toyota Window Sticker by VIN Lookup - Get Factory Options
+
+[97/126] /window-sticker/porsche
+  Baseline URL: https://vehiclehistory.eu/window-sticker/porsche
+  DEV URL: https://vhreu.accessautohistory.com/window-sticker/porsche
+  Baseline Status: 200
+  DEV Status: 200
+  Result: Passed
+  Response Time: 0.61s
+  Page Title: Porsche Window Sticker VIN Lookup: Original Factory Specs
+
+[98/126] /vin-check/austria
+  Baseline URL: https://vehiclehistory.eu/vin-check/austria
+  DEV URL: https://vhreu.accessautohistory.com/vin-check/austria
+  Baseline Status: 200
+  DEV Status: 200
+  Result: Passed
+  Response Time: 0.88s
+  Page Title: Austria VIN Check: See the Car’s Odometer Reading 🚗
+
+[99/126] /vin-check/andorra
+  Baseline URL: https://vehiclehistory.eu/vin-check/andorra
+  DEV URL: https://vhreu.accessautohistory.com/vin-check/andorra
+  Baseline Status: 200
+  DEV Status: 200
+  Result: Passed
+  Response Time: 0.86s
+  Page Title: Andorra VIN Check - Verify Theft, Accident, and Title Status
+
+[100/126] /vin-decoder
+  Baseline URL: https://vehiclehistory.eu/vin-decoder
+  DEV URL: https://vhreu.accessautohistory.com/vin-decoder
+  Baseline Status: 200
+  DEV Status: 200
+  Result: Passed
+  Response Time: 0.77s
+  Page Title: VIN Decoder – Decode Any Vehicle Identification Number
+
+[101/126] /vin-check/albania
+  Baseline URL: https://vehiclehistory.eu/vin-check/albania
+  DEV URL: https://vhreu.accessautohistory.com/vin-check/albania
+  Baseline Status: 200
+  DEV Status: 200
+  Result: Passed
+  Response Time: 0.81s
+  Page Title: Albania VIN Check: Check Accident &amp; CountryOrigin History 🚗
+
+[102/126] /window-sticker/subaru
+  Baseline URL: https://vehiclehistory.eu/window-sticker/subaru
+  DEV URL: https://vhreu.accessautohistory.com/window-sticker/subaru
+  Baseline Status: 200
+  DEV Status: 200
+  Result: Passed
+  Response Time: 0.65s
+  Page Title: Subaru Window Sticker by VIN: Get Original Factory Specs
+
+[103/126] /window-sticker/bmw
+  Baseline URL: https://vehiclehistory.eu/window-sticker/bmw
+  DEV URL: https://vhreu.accessautohistory.com/window-sticker/bmw
+  Baseline Status: 200
+  DEV Status: 200
+  Result: Passed
+  Response Time: 0.50s
+  Page Title: BMW Window Sticker by VIN Lookup: Original Factory Build 🚗
+
+[104/126] /vin-decoder/land-rover
+  Baseline URL: https://vehiclehistory.eu/vin-decoder/land-rover
+  DEV URL: https://vhreu.accessautohistory.com/vin-decoder/land-rover
+  Baseline Status: 200
+  DEV Status: 200
+  Result: Passed
+  Response Time: 0.36s
+  Page Title: Land Rover VIN Decoder – Check Vehicle History in Europe
+
+[105/126] /vin-decoder/alfa-romeo
+  Baseline URL: https://vehiclehistory.eu/vin-decoder/alfa-romeo
+  DEV URL: https://vhreu.accessautohistory.com/vin-decoder/alfa-romeo
+  Baseline Status: 200
+  DEV Status: 200
+  Result: Passed
+  Response Time: 0.36s
+  Page Title: Alfa Romeo VIN Decoder: Check Your Vehicle’s Full History
+
+[106/126] /window-sticker/chrysler
+  Baseline URL: https://vehiclehistory.eu/window-sticker/chrysler
+  DEV URL: https://vhreu.accessautohistory.com/window-sticker/chrysler
+  Baseline Status: 200
+  DEV Status: 200
+  Result: Passed
+  Response Time: 0.51s
+  Page Title: Chrysler Window Sticker by VIN: Accurate Factory Specs 🚗
+
+[107/126] /window-sticker/jeep
+  Baseline URL: https://vehiclehistory.eu/window-sticker/jeep
+  DEV URL: https://vhreu.accessautohistory.com/window-sticker/jeep
+  Baseline Status: 200
+  DEV Status: 200
+  Result: Passed
+  Response Time: 0.39s
+  Page Title: Jeep Window Sticker by VIN: Accurate Factory Specs &amp; Options
+
+[108/126] /window-sticker/hyundai
+  Baseline URL: https://vehiclehistory.eu/window-sticker/hyundai
+  DEV URL: https://vhreu.accessautohistory.com/window-sticker/hyundai
+  Baseline Status: 200
+  DEV Status: 200
+  Result: Passed
+  Response Time: 0.60s
+  Page Title: Hyundai Window Sticker VIN Lookup: Original Factory Specs
+
+[109/126] /window-sticker/chevrolet
+  Baseline URL: https://vehiclehistory.eu/window-sticker/chevrolet
+  DEV URL: https://vhreu.accessautohistory.com/window-sticker/chevrolet
+  Baseline Status: 200
+  DEV Status: 200
+  Result: Passed
+  Response Time: 0.47s
+  Page Title: Chevrolet Window Sticker Lookup: Check Original Factory Data
+
+[110/126] /vin-decoder/acura
+  Baseline URL: https://vehiclehistory.eu/vin-decoder/acura
+  DEV URL: https://vhreu.accessautohistory.com/vin-decoder/acura
+  Baseline Status: 200
+  DEV Status: 200
+  Result: Passed
+  Response Time: 0.52s
+  Page Title: Acura VIN Decoder - Decode Any Acura VIN Instantly
+
+[111/126] /window-sticker
+  Baseline URL: https://vehiclehistory.eu/window-sticker
+  DEV URL: https://vhreu.accessautohistory.com/window-sticker
+  Baseline Status: 200
+  DEV Status: 200
+  Result: Passed
+  Response Time: 0.36s
+  Page Title: Window Sticker by VIN – Get Original Factory Sticker Online
+
+[112/126] /vin-decoder/fiat
+  Baseline URL: https://vehiclehistory.eu/vin-decoder/fiat
+  DEV URL: https://vhreu.accessautohistory.com/vin-decoder/fiat
+  Baseline Status: 200
+  DEV Status: 200
+  Result: Passed
+  Response Time: 0.35s
+  Page Title: Fiat VIN Decoder - Get Vehicle History Report by VIN Number
+
+[113/126] /vin-decoder/bmw
+  Baseline URL: https://vehiclehistory.eu/vin-decoder/bmw
+  DEV URL: https://vhreu.accessautohistory.com/vin-decoder/bmw
+  Baseline Status: 200
+  DEV Status: 200
+  Result: Passed
+  Response Time: 0.38s
+  Page Title: BMW VIN Decoder – Free VIN Check &amp; Car History Europe
+
+[114/126] /vin-decoder/renault
+  Baseline URL: https://vehiclehistory.eu/vin-decoder/renault
+  DEV URL: https://vhreu.accessautohistory.com/vin-decoder/renault
+  Baseline Status: 200
+  DEV Status: 200
+  Result: Passed
+  Response Time: 0.41s
+  Page Title: Renault VIN Decoder: Search Vehicle History Online in Europe
+
+[115/126] /vin-decoder/saab
+  Baseline URL: https://vehiclehistory.eu/vin-decoder/saab
+  DEV URL: https://vhreu.accessautohistory.com/vin-decoder/saab
+  Baseline Status: 200
+  DEV Status: 200
+  Result: Passed
+  Response Time: 0.42s
+  Page Title: Saab VIN Decoder: Get Vehicle History Lookup in Europe
+
+[116/126] /vin-decoder/citroen
+  Baseline URL: https://vehiclehistory.eu/vin-decoder/citroen
+  DEV URL: https://vhreu.accessautohistory.com/vin-decoder/citroen
+  Baseline Status: 200
+  DEV Status: 200
+  Result: Passed
+  Response Time: 0.39s
+  Page Title: Citroën VIN Decoder: Free Check Vehicle History in Europe
+
+[117/126] /vin-decoder/peugeot
+  Baseline URL: https://vehiclehistory.eu/vin-decoder/peugeot
+  DEV URL: https://vhreu.accessautohistory.com/vin-decoder/peugeot
+  Baseline Status: 200
+  DEV Status: 200
+  Result: Passed
+  Response Time: 0.36s
+  Page Title: Peugeot VIN Decoder | Uncover Your Car History in Europe
+
+[118/126] /frequently-asked-questions
+  Baseline URL: https://vehiclehistory.eu/frequently-asked-questions
+  DEV URL: https://vhreu.accessautohistory.com/frequently-asked-questions
+  Baseline Status: 200
+  DEV Status: 200
+  Result: Passed
+  Response Time: 0.41s
+  Page Title: Frequently Asked Questions About Vehicle History Europe
+
+[119/126] /vin-decoder/jaguar
+  Baseline URL: https://vehiclehistory.eu/vin-decoder/jaguar
+  DEV URL: https://vhreu.accessautohistory.com/vin-decoder/jaguar
+  Baseline Status: 200
+  DEV Status: 200
+  Result: Passed
+  Response Time: 0.50s
+  Page Title: Jaguar VIN Decoder in Europe: Search Vehicle History Now
+
+[120/126] /request-a-refund
+  Baseline URL: https://vehiclehistory.eu/request-a-refund
+  DEV URL: https://vhreu.accessautohistory.com/request-a-refund
+  Baseline Status: 200
+  DEV Status: 200
+  Result: Passed
+  Response Time: 0.23s
+  Page Title: Request a Refund - Vehicle History Europe
+
+[121/126] /privacy-policy
+  Baseline URL: https://vehiclehistory.eu/privacy-policy
+  DEV URL: https://vhreu.accessautohistory.com/privacy-policy
+  Baseline Status: 200
+  DEV Status: 200
+  Result: Passed
+  Response Time: 0.34s
+  Page Title: Privacy Policy | Vehicle History Europe
+
+[122/126] /terms-of-service
+  Baseline URL: https://vehiclehistory.eu/terms-of-service
+  DEV URL: https://vhreu.accessautohistory.com/terms-of-service
+  Baseline Status: 200
+  DEV Status: 200
+  Result: Passed
+  Response Time: 0.31s
+  Page Title: Terms and Conditions - Vehicle History Europe
+
+[123/126] /sample-report
+  Baseline URL: https://vehiclehistory.eu/sample-report
+  DEV URL: https://vhreu.accessautohistory.com/sample-report
+  Baseline Status: 200
+  DEV Status: 200
+  Result: Passed
+  Response Time: 0.24s
+  Page Title: Sample VIN Decoding Report | Vehicle History Europe
+
+[124/126] /vin-decoder/volvo
+  Baseline URL: https://vehiclehistory.eu/vin-decoder/volvo
+  DEV URL: https://vhreu.accessautohistory.com/vin-decoder/volvo
+  Baseline Status: 200
+  DEV Status: 200
+  Result: Passed
+  Response Time: 0.46s
+  Page Title: Volvo VIN Decoder: Lookup Vehicle History in Europe for Free
+
+[125/126] /contact-us
+  Baseline URL: https://vehiclehistory.eu/contact-us
+  DEV URL: https://vhreu.accessautohistory.com/contact-us
+  Baseline Status: 200
+  DEV Status: 200
+  Result: Passed
+  Response Time: 0.34s
+  Page Title: Contact Us - Vehicle History Europe
+
+[126/126] /pricing
+  Baseline URL: https://vehiclehistory.eu/pricing
+  DEV URL: https://vhreu.accessautohistory.com/pricing
+  Baseline Status: 200
+  DEV Status: 200
+  Result: Passed
+  Response Time: 0.36s
+  Page Title: Pricing | Vehicle History Europe
+
